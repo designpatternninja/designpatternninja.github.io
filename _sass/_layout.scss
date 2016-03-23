@@ -284,3 +284,16 @@
          }
     }
 }
+
+aside {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#sideAppMenu {
+    h3 {
+        padding-left: 1rem;
+        text-transform: capitalize;
+    }
+}

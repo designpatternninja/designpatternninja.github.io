@@ -3,11 +3,40 @@
 
   {% include head.html %}
 
-  <body>
+  <body ng-app="app" ng-init="postTags = {}">
 
     {% include header.html %}
 
     <div class="page-content">
+    <md-sidenav
+        id="sideAppMenu"
+        class="md-sidenav-left"
+        md-is-locked-open="true"
+        md-component-id="left"
+        md-disable-backdrop
+        md-whiteframe="4">
+        {% for mainTag in site.mainTags %}
+        <h3>{{mainTag}}</h3>
+        <md-list>
+          {% for post in site.posts %}
+
+            {% unless post.categories contains "news" %}
+            {% if post.categories contains mainTag %}
+            <md-list-item class="md-2-line">
+              <div class="md-list-item-text">
+                <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+                <aside class="tags" ng-init="postTags['{{post.title}}'] = [{% for tag in post.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
+                  <md-chips ng-model="postTags['{{post.title}}']" readonly="true" md-max-chips="3" />
+                </aside>
+              </div>
+            </md-list-item>
+            {% endif %}
+            {% endunless %}
+
+          {% endfor %}
+          </md-list>
+        {% endfor %}
+      </md-sidenav>
       <div class="wrapper">
         {{ content }}
       </div>

@@ -1,47 +1,17 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting" ng-init="postTags['{{page.title}}'] = [{% for tag in page.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
 
 <a href="https://github.com/mfidemraizer/designpattern.ninja/_posts/accumulated_result"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <table class="post-metadata">
-    	<thead>
-    		<tr>
-    		<td>Field</td>
-    		<td>Content</td>
-    	</tr>
-    	</thead>
-    	<tr>
-    		<td itemprop="author" itemscope itemtype="http://schema.org/Person">Original author</td>
-    		<td><a href="{{ site.contributors[page.originalAuthor].siteUrl }}" target="_blank">{{ site.contributors[page.authors.first].fullName }}</a></td>
-    	</tr>
-    	<tr>
-        {% if page.authors.size > 1 %}
-    	<tr>
-    		<td>All authors</td>
-    		<td>
-    			<ul class="post-authors">
-    				{% for author in page.authors %} 
-    					<li><a href="{{ site.contributors[author].siteUrl }}" target="_blank">{{ site.contributors[author].fullName }}</a></li>
-					{% endfor %}
-    			</ul>
-    		</td>
-    	</tr>
-        {% endif %}
 
-    	<tr>
-    		<td>Creation date</td>
-    		<td><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></td>
-    	</tr>
-
-    	<tr>
-    		<td>Modified date</td>
-    		<td><time datetime="{{ page.modifiedDate | date_to_xmlschema }}" itemprop="dateModified">{{ page.modifiedDate | date: "%b %-d, %Y" }}</time></td>
-    	</tr>
-    </table>
+       <aside>
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+              <md-chips ng-model="postTags['{{page.title}}']" readonly="true" md-max-chips="3" />
+        </aside>
   </header>
 
   <div class="post-content" itemprop="articleBody">
