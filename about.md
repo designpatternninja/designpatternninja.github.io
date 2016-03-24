@@ -8,7 +8,7 @@ permalink: /contribute/
 
 # Design pattern ninja catalog
 
-This is a community-oriented, open catalog of software design patterns. 
+This is a community-driven, open catalog of software design patterns. 
 
 Its main goal is cataloging as many design patterns as possible, and not only the most famous ones, but it's a place where anyone can publish new and invented design patterns and/or improve existing ones.
 
