@@ -8,6 +8,17 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    .wrapper {
+        padding-right: 30px;
+        padding-left: 30px;
+        display: flex;
+        justify-content: center;
+
+        a {
+            padding-right: 2rem;
+        }
+    }
 }
 
 .site-title {
@@ -168,6 +179,10 @@
  * Page content
  */
 .page-content {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: stretch;
     padding: $spacing-unit 0;
 }
 
@@ -292,6 +307,12 @@ aside {
 }
 
 #sideAppMenu {
+    flex-grow: 1;
+    margin-left: 2rem;
+    box-shadow: none;
+    background-color: transparent;
+    border-right: 1px solid #ddd;
+    min-width: 25rem;
     h3 {
         padding-left: 1rem;
         text-transform: capitalize;
