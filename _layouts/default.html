@@ -17,7 +17,7 @@
         md-whiteframe="4">
         {% for mainTag in site.mainTags %}
         <h3>{{mainTag}}</h3>
-        <md-list>
+        <md-list class="design-pattern-list">
           {% for post in site.posts %}
 
             {% unless post.categories contains "news" %}
@@ -25,8 +25,14 @@
             <md-list-item class="md-2-line">
               <div class="md-list-item-text">
                 <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
-                <aside class="tags" ng-init="postTags['{{post.title}}'] = [{% for tag in post.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
-                  <md-chips ng-model="postTags['{{post.title}}']" readonly="true" md-max-chips="3" />
+                  <aside>
+                    <ul class="tags">
+                        {% for tag in post.categories %}
+                        {% unless tag == mainTag %}
+                        <li>{{tag}}</li>
+                        {% endunless %}
+                        {% endfor %}
+                    </ul>
                 </aside>
               </div>
             </md-list-item>

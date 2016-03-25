@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "aaa"
+layout: design-pattern
+title:  "Accumulated result"
 date:   2016-03-12 17:47:10 +0100
 modifiedDate: 2016-03-12 17:47:10 +0100
 categories:
-   - news
+   - architectural
+   - language-agnostic
+   - n-layer
 authors: 
    - mfidemraizer
 permalink: /:categories/:title
