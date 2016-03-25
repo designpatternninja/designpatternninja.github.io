@@ -15,7 +15,11 @@
         md-component-id="left"
         md-disable-backdrop
         md-whiteframe="4">
+
+        <h2>All design patterns</h2>
+
         {% for mainTag in site.mainTags %}
+        <section>
         <h3>{{mainTag}}</h3>
         <md-list class="design-pattern-list">
           {% for post in site.posts %}
@@ -41,6 +45,7 @@
 
           {% endfor %}
           </md-list>
+        </section>
         {% endfor %}
       </md-sidenav>
       <div class="wrapper">

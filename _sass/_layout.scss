@@ -5,6 +5,7 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    background: radial-gradient(ellipse at center, #161900 60%,#6d0019 100%);
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -17,6 +18,14 @@
 
         a {
             padding-right: 2rem;
+            font-weight: lighter;
+            color: white;
+
+            &.site-title {
+                color: white;
+                text-shadow: -1px -1px 0 #822e2e, 1px -1px 0 #822e2e, -2px 1px 0 #822e2e, 1px 1px 0 #822e2e;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -314,6 +323,7 @@ aside {
     border-right: 1px solid #ddd;
     min-width: 25rem;
     h3 {
+        margin: 0;
         padding-left: 1rem;
         text-transform: capitalize;
     }
