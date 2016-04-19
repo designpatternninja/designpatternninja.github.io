@@ -2,10 +2,11 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 5px solid #424242;
+    border-bottom: 1px solid #ddd;
     min-height: 56px;
-    background: radial-gradient(ellipse at center, #161900 60%,#6d0019 100%);
+    background-color: #eee;
+    position: relative;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -19,7 +20,7 @@
         a {
             padding-right: 2rem;
             font-weight: lighter;
-            color: white;
+            color: #444;
 
             &.site-title {
                 color: white;
