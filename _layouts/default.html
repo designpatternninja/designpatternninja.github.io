@@ -8,46 +8,40 @@
     {% include header.html %}
 
     <div class="page-content">
-    <md-sidenav
-        id="sideAppMenu"
-        class="md-sidenav-left"
-        md-is-locked-open="true"
-        md-component-id="left"
-        md-disable-backdrop
-        md-whiteframe="4">
+      <nav id="sideAppMenu">
 
         <h2>All design patterns</h2>
 
         {% for mainTag in site.mainTags %}
         <section>
-        <h3>{{mainTag}}</h3>
-        <md-list class="design-pattern-list">
-          {% for post in site.posts %}
+          <h3>{{mainTag}}</h3>
+          <ol class="design-pattern-list">
+            {% for post in site.posts %}
 
-            {% unless post.categories contains "news" %}
-            {% if post.categories contains mainTag %}
-            <md-list-item class="md-2-line">
-              <div class="md-list-item-text">
-                <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
-                  <aside>
-                    <ul class="tags">
-                        {% for tag in post.categories %}
-                        {% unless tag == mainTag %}
-                        <li>{{tag}}</li>
-                        {% endunless %}
-                        {% endfor %}
-                    </ul>
-                </aside>
-              </div>
-            </md-list-item>
-            {% endif %}
-            {% endunless %}
+              {% unless post.categories contains "news" %}
+              {% if post.categories contains mainTag %}
+              <li>
+                <div class="md-list-item-text">
+                  <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+                    <aside>
+                      <ul class="tags">
+                          {% for tag in post.categories %}
+                          {% unless tag == mainTag %}
+                          <li>{{tag}}</li>
+                          {% endunless %}
+                          {% endfor %}
+                      </ul>
+                  </aside>
+                </div>
+              </li>
+              {% endif %}
+              {% endunless %}
 
-          {% endfor %}
-          </md-list>
+            {% endfor %}
+            </ol>
         </section>
         {% endfor %}
-      </md-sidenav>
+      </nav>
       <div class="wrapper">
         {{ content }}
       </div>

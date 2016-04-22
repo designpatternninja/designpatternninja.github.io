@@ -63,7 +63,7 @@
         }
     }
 
-    @include media-query($on-palm) {
+    /*@include media-query($on-palm) {
         position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
@@ -110,7 +110,7 @@
             }
             margin-left: 20px;
         }
-    }
+    }*/
 }
 
 
@@ -191,7 +191,6 @@
 .page-content {
     display: flex;
     flex-flow: row;
-    justify-content: center;
     align-items: stretch;
     padding: $spacing-unit 0;
 }
@@ -317,16 +316,33 @@ aside {
 }
 
 #sideAppMenu {
-    flex-grow: 1;
-    margin-left: 2rem;
     box-shadow: none;
     background-color: transparent;
     border-right: 1px solid #ddd;
-    min-width: 25rem;
+    flex-shrink: 0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    align-items: stretch;
+    min-width: 20rem;
+
     h3 {
         margin: 0;
-        padding-left: 1rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
+        text-align: right;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #555;
+    }
+
+    > section {
+        padding: 1rem;
+        border-bottom: 2px dotted #ddd;
+
+        &:last-child {
+            border: 0;
+        }
     }
 }
 
@@ -348,24 +364,32 @@ ul.tags {
 }
 
 .design-pattern-list {
-    .md-list-item-text {
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: flex-start;
+    padding: 0;
+    margin: 0;
 
-        h4 {
-            font-size: 1.3rem !important;
-        }
+    li {
+        list-style-type: none;
 
-        aside {
-            flex: 1;
+        .md-list-item-text {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: flex-start;
 
-            .tags {
-                padding: 0;
+            h4 {
+                font-size: 1.3rem !important;
+                margin-bottom: 0;
+            }
 
-                li {
-                    font-size: 0.8rem;
+            aside {
+                flex: 1;
+
+                .tags {
+                    padding: 0;
+
+                    li {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
