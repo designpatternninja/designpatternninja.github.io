@@ -24,8 +24,14 @@ layout: default
     	<tr>
     		<td itemprop="author" itemscope itemtype="http://schema.org/Person">Original author</td>
     		<td>
+                {% unless site.contributors[page.authors.first].avatarUrl contains "/img/" %}
                 <img src="{{ site.contributors[page.authors.first].avatarUrl }}&s=30">
+                {% endunless %}
+                {% if site.contributors[page.authors.first].avatarUrl contains "/img/" %}
+                <img class="avatar-30" src="{{ site.contributors[page.authors.first].avatarUrl }}">
+                {% endif %}
                 <a href="{{ site.contributors[page.authors.first].siteUrl }}" target="_blank">{{ site.contributors[page.authors.first].fullName }}</a>
+
             </td>
     	</tr>
     	<tr>
@@ -35,10 +41,12 @@ layout: default
     		<td>
     			<ul class="post-authors">
     				{% for author in page.authors %} 
+                    {% unless author == page.authors.first %}
     					<li>
-                            <img src="{{ site.contributors[page.authors.first].avatarUrl }}&s=30">
+                            <img src="{{ site.contributors[author].avatarUrl }}&s=30">
                             <a href="{{ site.contributors[author].siteUrl }}" target="_blank">{{ site.contributors[author].fullName }}</a>
                         </li>
+                    {% endunless %}
 					{% endfor %}
     			</ul>
     		</td>

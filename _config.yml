@@ -18,11 +18,17 @@ markdown: kramdown
 
 # Contribution settings
 contributors:
+    anonymous:
+        fullName: "Anonymous"
+        siteUrl: "http://designpattern.ninja"
+        avatarUrl: "/img/anonymous_author_avatar.png"
     mfidemraizer:
         fullName: "Matías Fidemraizer"
         siteUrl: "http://matiasfidemraizer.com"
         avatarUrl: "https://www.gravatar.com/avatar/41e7ea21270a6079bb14d6d60ec75d8a?d=identicon&r=PG"
 
+
 # Tagging
 mainTags: 
     - architectural
+    - creational

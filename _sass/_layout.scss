@@ -327,13 +327,10 @@ aside {
     align-items: stretch;
     min-width: 20rem;
 
-    h3 {
-        margin: 0;
-        text-transform: uppercase;
+    > h2 {
         text-align: right;
-        font-size: 0.9rem;
-        font-weight: bold;
-        color: #555;
+        margin-bottom: 0;
+        border-bottom: 1px solid #ddd;
     }
 
     > section {
@@ -342,6 +339,15 @@ aside {
 
         &:last-child {
             border: 0;
+        }
+
+        h3 {
+            margin: 0;
+            text-transform: uppercase;
+            text-align: right;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #555;
         }
     }
 }
@@ -394,4 +400,10 @@ ul.tags {
             }
         }
     }
+}
+
+.content-wrapper {
+    min-width: 0;
+    padding-left: 100px;
+    padding-right: 100px;
 }
