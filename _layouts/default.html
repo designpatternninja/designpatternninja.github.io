@@ -37,7 +37,14 @@
             </md-content>
           </md-tab>
 
-          <md-tab id="tabDesignPatterns" label="All design patterns">
+
+                {% for post in site.posts %}
+                {% unless post.categories contains "news" %}
+                {% increment designPatternCount %}
+                {% endunless %}
+                {% endfor %}
+
+          <md-tab id="tabDesignPatterns" label="All design patterns ({{ designPatternCount }})">
             {% for mainTag in site.mainTags %}
             <section id="tabDesignPatterns">
               <h3>{{mainTag}}</h3>
