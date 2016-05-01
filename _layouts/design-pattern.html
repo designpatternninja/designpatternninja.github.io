@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting" ng-init="postTags['{{page.title}}'] = [{% for tag in page.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
+<article ng-controller="MasterController as master" class="post" itemscope itemtype="http://schema.org/BlogPosting" ng-init="master.postTags = [{% for tag in page.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
 <a target="_blank" href="https://github.com/designpatternninja/designpatternninja.github.io/tree/master/_posts/{{page.date|date: "%Y-%m-%d"}}-{{page.slug }}.markdown"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a>
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
@@ -67,6 +67,20 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+  </div>
+
+  <div class="design-pattern-issues">
+    <h3>Did you find some problem on this design pattern, or do you want to improve it?</h3>
+    <p>Go to our GitHub repository and open an issue, and let's talk about it!</p>
+    <ol>
+        <li>
+            <a target="_blank" href="https://github.com/designpatternninja/designpatternninja.github.io/issues/new">Open a new issue</a>
+        <li>
+            <a target="_blank" href="https://github.com/designpatternninja/designpatternninja.github.io/labels/{{ page.title | slugify }}">See open issues for this design pattern</a>
+        </li>
+        <li>
+            <a target="_blank" href="https://github.com/designpatternninja/designpatternninja.github.io">You can also fork out Git repository and provide an improvement as a pull request!</a>
+        </li>
   </div>
 
 </article>

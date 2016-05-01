@@ -417,3 +417,17 @@ ul.tags {
     padding-right: 3vw;
     background-color: white;
 }
+
+.design-pattern-issues {
+    border: 3px dotted #ddd;
+    border-radius: 6px;
+    padding: 2rem;
+    
+    ol {
+        margin: 0;
+
+        li {
+            list-style-type: none;
+        }
+    }
+}
