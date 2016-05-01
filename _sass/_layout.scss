@@ -193,6 +193,7 @@
     flex-flow: row;
     align-items: stretch;
     padding: $spacing-unit 0;
+    background-color: white;
 }
 
 .page-heading {
@@ -317,15 +318,16 @@ aside {
 
 #sideAppMenu {
     box-shadow: none;
-    background-color: transparent;
-    border-right: 1px solid #ddd;
+    background-color: #eee;
+    border: 3px dotted white;
     flex-shrink: 0;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: flex-start;
     flex-flow: column;
     align-items: stretch;
     min-width: 20rem;
+    border-radius: 10px;
 
     > h2 {
         text-align: right;
@@ -362,10 +364,11 @@ ul.tags {
         list-style-type: none;
         margin-left: 10px;
         padding: 0 10px;
-        border: 1px solid #444;
+        border: 1px solid #888;
         border-radius: 2px;
         background-color: white;
         cursor: default;
+        box-shadow: 4px 4px 0 #ddd;
     }
 }
 
@@ -375,6 +378,10 @@ ul.tags {
 
     li {
         list-style-type: none;
+        background-color: white;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
 
         .md-list-item-text {
             display: flex;
@@ -383,7 +390,7 @@ ul.tags {
             justify-content: flex-start;
 
             h4 {
-                font-size: 1.3rem !important;
+                font-size: 1rem !important;
                 margin-bottom: 0;
             }
 
@@ -406,4 +413,5 @@ ul.tags {
     min-width: 0;
     padding-left: 100px;
     padding-right: 100px;
+    background-color: white;
 }
