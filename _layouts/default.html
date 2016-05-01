@@ -9,38 +9,66 @@
 
     <div class="page-content">
       <nav id="sideAppMenu">
-
-        <h2>All design patterns</h2>
-
-        {% for mainTag in site.mainTags %}
-        <section>
-          <h3>{{mainTag}}</h3>
-          <ol class="design-pattern-list">
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="News">
+            <md-content id="tabNews">
             {% for post in site.posts %}
-
-              {% unless post.categories contains "news" %}
-              {% if post.categories contains mainTag %}
+            {% if post.categories contains "news" %}
+            <ol>
               <li>
-                <div class="md-list-item-text">
-                  <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
-                    <aside>
-                      <ul class="tags">
-                          {% for tag in post.categories %}
-                          {% unless tag == mainTag %}
-                          <li>{{tag}}</li>
-                          {% endunless %}
-                          {% endfor %}
-                      </ul>
-                  </aside>
+                <div class="post-author">
+                  <a href="{{ site.contributors[post.authors.first].siteUrl }}" target="_blank">
+                  {% unless site.contributors[post.authors.first].avatarUrl contains "/img/" %}
+                  <img src="{{ site.contributors[post.authors.first].avatarUrl }}&s=30">
+                  {% endunless %}
+                  {% if site.contributors[post.authors.first].avatarUrl contains "/img/" %}
+                  <img class="avatar-30" src="{{ site.contributors[post.authors.first].avatarUrl }}">
+                  {% endif %}
+                </a>
+                </div>
+                <div class="post-info">
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <time class="post-date">{{ post.date | date: "%b %-d, %Y" }}</time>
                 </div>
               </li>
-              {% endif %}
-              {% endunless %}
-
-            {% endfor %}
             </ol>
-        </section>
-        {% endfor %}
+            {% endif %}
+            {% endfor %}
+            </md-content>
+          </md-tab>
+
+          <md-tab id="tabDesignPatterns" label="All design patterns">
+            {% for mainTag in site.mainTags %}
+            <section id="tabDesignPatterns">
+              <h3>{{mainTag}}</h3>
+              <ol class="design-pattern-list">
+                {% for post in site.posts %}
+
+                  {% unless post.categories contains "news" %}
+                  {% if post.categories contains mainTag %}
+                  <li>
+                    <div class="md-list-item-text">
+                      <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+                        <aside>
+                          <ul class="tags">
+                              {% for tag in post.categories %}
+                              {% unless tag == mainTag %}
+                              <li>{{tag}}</li>
+                              {% endunless %}
+                              {% endfor %}
+                          </ul>
+                      </aside>
+                    </div>
+                  </li>
+                  {% endif %}
+                  {% endunless %}
+
+                {% endfor %}
+                </ol>
+            </section>
+            {% endfor %}
+          </md-tab>
+        </md-tabs>
       </nav>
       <div class="content-wrapper">
         {{ content }}

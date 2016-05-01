@@ -422,12 +422,48 @@ ul.tags {
     border: 3px dotted #ddd;
     border-radius: 6px;
     padding: 2rem;
-    
+
     ol {
         margin: 0;
 
         li {
             list-style-type: none;
+        }
+    }
+}
+
+#tabDesignPatterns {
+    padding-top: 20px;
+}
+
+#tabNews {
+    background-color: transparent;
+
+    ol {
+        margin: 0;
+        padding: 25px 0;
+
+        li {
+            list-style-type: none;
+            display: flex;
+
+            .post-info {
+                padding-left: 10px;
+                display: flex;
+                flex-flow: column;
+                
+                a {
+                    max-width: 36ch;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+
+                time {
+                    font-size: 0.9rem;
+                    align-self: flex-end;
+                }
+            }
         }
     }
 }
