@@ -39,7 +39,6 @@
     margin-bottom: 0;
     float: left;
 
-    &,
     &:visited {
         color: $grey-color-dark;
     }
@@ -384,26 +383,40 @@ ul.tags {
         padding: 10px 0;
         border: 1px solid #ddd;
         border-radius: 4px;
+        transition: all 0.5s;
 
-        .md-list-item-text {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: flex-start;
+        &.selected {
+            background-color: #ABEBD8;
+            border: 3px dotted lightgreen;
+            transform: scale(1.2);
+            animation: rubberBand 1s forwards;
+        }
 
-            h4 {
-                font-size: 1rem !important;
-                margin-bottom: 0;
-            }
+        > a {
+            color: #444;
+            font-weight: normal;
+            text-decoration: none;
 
-            aside {
-                flex: 1;
+            .md-list-item-text {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: flex-start;
 
-                .tags {
-                    padding: 0;
+                h4 {
+                    font-size: 1rem !important;
+                    margin-bottom: 0;
+                }
 
-                    li {
-                        font-size: 0.8rem;
+                aside {
+                    flex: 1;
+
+                    .tags {
+                        padding: 0;
+
+                        li {
+                            font-size: 0.8rem;
+                        }
                     }
                 }
             }
@@ -416,6 +429,12 @@ ul.tags {
     padding-left: 3vw;
     padding-right: 3vw;
     background-color: white;
+
+    article {
+        > header, > .post-content {
+            animation: slideInUp 1s ease;
+        }
+    }
 }
 
 .design-pattern-issues {
