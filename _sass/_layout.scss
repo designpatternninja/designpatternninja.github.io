@@ -324,8 +324,8 @@ aside {
     display: flex;
     justify-content: flex-start;
     flex-flow: column;
-    align-items: stretch;
-    min-width: 20rem;
+    align-items: stretch;    
+        min-width: 22vw;
     border-radius: 10px;
 
     > h2 {
@@ -451,7 +451,7 @@ ul.tags {
     }
 }
 
-#tabDesignPatterns {
+#tabDesignPatterns, #tabAntiDesignPatterns {
     padding-top: 20px;
 }
 
