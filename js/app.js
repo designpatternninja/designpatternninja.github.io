@@ -10,6 +10,7 @@
 		this.patterns = {};
 		var that = this;
 
+
 		this.currentPath = window.location.pathname;
 
 		if(window.location.pathname.indexOf("/news/") > -1)
