@@ -325,7 +325,7 @@ aside {
     justify-content: flex-start;
     flex-flow: column;
     align-items: stretch;    
-        min-width: 22vw;
+    min-width: 390px;
     border-radius: 10px;
 
     > h2 {
@@ -384,6 +384,7 @@ ul.tags {
         border: 1px solid #ddd;
         border-radius: 4px;
         transition: all 0.5s;
+        margin-bottom: 20px;
 
         &.selected {
             background-color: #ABEBD8;
