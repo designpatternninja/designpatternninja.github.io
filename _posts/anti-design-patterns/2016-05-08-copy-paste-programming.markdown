@@ -7,6 +7,7 @@ categories:
     - anti-pattern
     - behavioral
 authors: 
+   - anonymous
    - mfidemraizer
 permalink: /:categories/:title
 ---
