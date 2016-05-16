@@ -25,7 +25,11 @@ contributors:
     mfidemraizer:
         fullName: "Matías Fidemraizer"
         siteUrl: "http://matiasfidemraizer.com"
-        avatarUrl: "https://www.gravatar.com/avatar/41e7ea21270a6079bb14d6d60ec75d8a?d=identicon&r=PG"
+        avatarUrl: "https://www.gravatar.com/avatar/41e7ea21270a6079bb14d6d60ec75d8a"
+    eevans:
+        fullName: "Eric Evans"
+        siteUrl: "https://www.linkedin.com/in/ericevansddd"
+        avatarUrl: "https://media.licdn.com/media/p/4/000/162/04b/1d33a7a.jpg"
 
 
 # Tagging
@@ -33,3 +37,4 @@ mainTags:
     - architectural
     - creational
     - behavioral
+    - object-mapping
