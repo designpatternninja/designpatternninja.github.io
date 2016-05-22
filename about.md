@@ -44,5 +44,5 @@ In the other hand, if you want to discuss how to improve or fix some design patt
 * Any contribution must fit well in a single markdown file, and the whole file name must be the design pattern name prefixed with the publishing date (for example: *2016-03-24-Service-layer.md*) and it must live within `./_posts` repository directory.
 * Any image or embedded resource must be placed in a directory within `./img` with the same name as the main markdown file excluding the publishing date (for example: `Service-layer`). Also, we do not accept external resources: all resources should be uploaded to the respository.
 * You should provide as many information as possible, but design patterns should be just *defined*: each design pattern should not look like an encyclopedia (we want to avoid readers be on *Too Long, Don't Read* case...).
-* All contributed content will be available using [Creative Commons Zero license](https://creativecommons.org/publicdomain/zero/1.0/).
+* All contributed content will be available using [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 * Bibliography or references are optional. But if your work is based on some other one, you must reference the source of your work with links.
