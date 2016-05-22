@@ -70,7 +70,7 @@
             {% endfor %}
 
               {% unless categoryCount == 0 %}
-              <h3>{{mainTag}} ({{categoryCount}})</h3>
+              <h3>{{mainTag| replace: "-", " "}} ({{categoryCount}})</h3>
               <ol class="design-pattern-list">
                 {% for post in site.posts %}
 
@@ -108,7 +108,7 @@
 
             {% for mainTag in site.mainTags %}
 
-                {% assign categoryCount = 0 %}
+            {% assign categoryCount = 0 %}
             {% for post in site.posts %}
               {% unless post.categories contains "news" %}
               {% if post.categories contains "anti-pattern" %}
@@ -120,7 +120,7 @@
             {% endfor %}
 
             {% unless categoryCount == 0 %}
-              <h3>{{mainTag}} ({{categoryCount}})</h3>
+              <h3>{{mainTag | replace: "-", " " }} ({{categoryCount}})</h3>
               <ol class="design-pattern-list">
                 {% for post in site.posts %}
 
