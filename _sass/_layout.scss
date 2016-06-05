@@ -587,3 +587,42 @@ ul.tags {
     justify-content: center;
     align-items: center;
 }
+
+.post-header {
+    > {
+        aside {
+            > {
+
+                div:last-child {
+                    margin-top: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    min-width: 250px;
+
+                    > {
+                        img:first-child {
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.post-content {
+    padding-top: 20px;
+}
+
+.post-author {
+    > {
+        a {
+            > {
+                img {
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
