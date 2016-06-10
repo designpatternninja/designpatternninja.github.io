@@ -613,6 +613,7 @@ ul.tags {
 
 .post-content {
     padding-top: 20px;
+    margin-right: 20px;
 }
 
 .post-author {
@@ -625,4 +626,26 @@ ul.tags {
             }
         }
     }
+}
+
+.post-brief {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .post-read-full-button {
+        width: 150px;
+        padding: 10px 10px;
+        background-color: green;
+        color: white;
+        border: 0;
+        text-align: center;
+    }
+}
+
+.post-list > li {
+    margin-bottom: 30px;
+    border: 3px dotted #ddd;
+    padding: 15px 60px;
+    border-radius: 20px;
 }

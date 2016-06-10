@@ -15,6 +15,10 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <section class="post-brief"> 
+          <div class="post-content">{{ post.content | truncate: 350 }}</div>
+          <a class="post-read-full-button" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+        </section>
       </li>
       {% endif %}
     {% endfor %}
