@@ -643,9 +643,40 @@ ul.tags {
     }
 }
 
-.post-list > li {
-    margin-bottom: 30px;
-    border: 3px dotted #ddd;
-    padding: 15px 60px;
-    border-radius: 20px;
+.post-list {
+   > {
+        li {
+            margin-bottom: 30px;
+            border: 3px dotted #ddd;
+            padding: 15px 60px;
+            border-radius: 20px;
+
+            > {
+                aside {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 3px dotted #ddd;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+
+                    .post-author {
+                        > {
+                            a {
+                                display: flex;
+                                flex-flow: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+
+                    div:last-child {
+                        margin-left: 50px;
+                    }
+                }
+            }
+        }
+    }
 }

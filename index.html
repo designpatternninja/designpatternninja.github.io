@@ -10,11 +10,26 @@ layout: default
     {% for post in site.posts %}
       {% if post.categories contains "news" %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <aside>
+          <div class="post-author">
+              <a href="{{ site.contributors[post.authors.first].siteUrl }}" target="_blank">
+              {% unless site.contributors[post.authors.first].avatarUrl contains "/img/" %}
+              <img src="{{ site.contributors[post.authors.first].avatarUrl }}&s=30">
+              {% endunless %}
+              {% if site.contributors[post.authors.first].avatarUrl contains "/img/" %}
+              <img class="avatar-30" src="{{ site.contributors[post.authors.first].avatarUrl }}">
+              {% endif %}
+              <span class="post-author-name">{{post.authors.first}}</span>
+            </a>
+          </div>
+          <div>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </div>
+        </aside>
         <section class="post-brief"> 
           <div class="post-content">{{ post.content | truncate: 350 }}</div>
           <a class="post-read-full-button" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
