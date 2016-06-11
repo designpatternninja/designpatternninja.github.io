@@ -674,6 +674,10 @@ ul.tags {
 
                     div:last-child {
                         margin-left: 50px;
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }

@@ -28,6 +28,7 @@ layout: default
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
+            <a class="disqus-comment-count" data-disqus-identifier="{{ post.id }}" href="{{ post.url }}#disqus_thread"></a> 
           </div>
         </aside>
         <section class="post-brief"> 
@@ -42,3 +43,4 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+<script id="dsq-count-scr" src="//designpatternninja.disqus.com/count.js" async></script>

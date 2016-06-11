@@ -23,5 +23,21 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+  <div id="disqus_thread"></div> 
 
+  <script>
+    window.disqus_config = function () { 
+      this.page.title = "{{ page.title }}";
+      this.page.url = "{{ page.url | prepend: site.baseurl | prepend: site.url }}";
+      this.page.identifier = "{{ page.id }}";
+      this.page.category = "{{ page.categories.first }}";
+    };
+
+    (function() { 
+      // DON'T EDIT BELOW THIS LINE 
+      var d = document, s = d.createElement('script'); 
+      s.src = '//designpatternninja.disqus.com/embed.js'; 
+      s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); 
+    })(); 
+    </script> 
 </article>
