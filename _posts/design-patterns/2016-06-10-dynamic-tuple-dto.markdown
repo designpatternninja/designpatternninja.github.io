@@ -1,7 +1,7 @@
 ---
 layout: design-pattern
 title:  "Dynamic tuple / DTO"
-date:   2016-06-10 00:00:00 +0100
+date:   2011-01-28 12:07:00 +0100
 modifiedDate: 2016-06-10 00:00:00 +0100
 categories:
    - architectural
