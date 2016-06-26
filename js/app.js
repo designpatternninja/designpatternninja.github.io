@@ -26,4 +26,11 @@
 					that.issues = issues;
 				});*/
 	});
+
+	$(function() {
+		setTimeout(function() {
+			var postHeader = $(".post-header");
+			postHeader.parallax({ imageSrc: postHeader.attr("data-image-src"), speed: 0.2 });
+		}, 1000);
+	});
 })();

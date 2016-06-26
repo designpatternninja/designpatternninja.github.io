@@ -192,7 +192,6 @@
     flex-flow: row;
     align-items: stretch;
     padding: $spacing-unit 0;
-    background-color: white;
 }
 
 .page-heading {
@@ -228,6 +227,9 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    background-size: cover;
+    height: 350px;
+    justify-content: center;
 }
 
 .post-title {
@@ -238,6 +240,10 @@
     @include media-query($on-laptop) {
         font-size: 36px;
     }
+}
+
+.post .post-title {
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 60%, rgba(255, 255, 255, 0) 100%)
 }
 
 .post-content {
@@ -430,7 +436,6 @@ ul.tags {
     min-width: 0;
     padding-left: 3vw;
     padding-right: 3vw;
-    background-color: white;
 
     article {
         > header, > .post-content {
@@ -589,6 +594,10 @@ ul.tags {
     align-items: center;
 }
 
+.post .post-header {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);
+}
+
 .post-header {
     > {
         aside {
@@ -601,9 +610,11 @@ ul.tags {
                     justify-content: space-around;
                     min-width: 250px;
 
+
                     > {
                         img:first-child {
                             border-radius: 4px;
+                            box-shadow: 0 0 10px #888;
                         }
                     }
                 }
