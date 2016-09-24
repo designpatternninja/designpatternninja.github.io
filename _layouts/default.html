@@ -38,22 +38,21 @@
             </md-content>
           </md-tab>
 
+          {% for post in site.posts %}
+          {% unless post.categories contains "news" %}
+          {% unless post.categories contains "anti-pattern" %}
+          {% assign designPatternCount = designPatternCount | plus: 1 %}
+          {% endunless %}
+          {% endunless %}
+          {% endfor %}
 
-                {% for post in site.posts %}
-                {% unless post.categories contains "news" %}
-                {% unless post.categories contains "anti-pattern" %}
-                {% increment designPatternCount %}
-                {% endunless %}
-                {% endunless %}
-                {% endfor %}
-
-                {% for post in site.posts %}
-                {% unless post.categories contains "news" %}
-                {% if post.categories contains "anti-pattern" %}
-                {% increment antiPatternCount %}
-                {% endif %}
-                {% endunless %}
-                {% endfor %}
+          {% for post in site.posts %}
+          {% unless post.categories contains "news" %}
+          {% if post.categories contains "anti-pattern" %}
+          {% assign antiPatternCount = antiPatternCount | plus: 1 %}
+          {% endif %}
+          {% endunless %}
+          {% endfor %}
 
           <md-tab id="tabDesignPatterns" label="Patterns ({{ designPatternCount }})">
             <section id="tabDesignPatterns">
@@ -163,7 +162,6 @@
     </div>
 
     {% include footer.html %}
-
   </body>
 
-</html>
+</html> 
