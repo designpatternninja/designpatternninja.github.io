@@ -600,21 +600,31 @@ ul.tags {
 
 .post-header {
     > {
-        aside {
-            > {
+        div {
+            width: 100%;
+            background-color: rgba(255,255,255,0.8);
+            padding: 40px 0;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
 
-                div:last-child {
-                    margin-top: 25px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    min-width: 250px;
+            aside {
+                > {
+
+                    div:last-child {
+                        margin-top: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        min-width: 250px;
 
 
-                    > {
-                        img:first-child {
-                            border-radius: 4px;
-                            box-shadow: 0 0 10px #888;
+                        > {
+                            img:first-child {
+                                border-radius: 4px;
+                                box-shadow: 0 0 10px #888;
+                            }
                         }
                     }
                 }

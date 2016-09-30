@@ -3,7 +3,8 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting" ng-init="postTags = [{% for tag in page.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
   <header class="post-header" data-parallax="scroll" data-image-src="/img/{{ page.id | slugify | replace: "news-", "news/" }}-header.jpg">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+      <div>
+      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
 
        <aside>
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
@@ -18,6 +19,7 @@ layout: default
                 <a href="{{ site.contributors[page.authors.first].siteUrl }}" target="_blank">{{ site.contributors[page.authors.first].fullName }}</a>
               </div>
         </aside>
+      </div>
   </header>
 
   <div class="post-content" itemprop="articleBody">
