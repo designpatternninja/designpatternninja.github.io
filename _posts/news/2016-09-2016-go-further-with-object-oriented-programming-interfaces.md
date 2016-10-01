@@ -76,7 +76,7 @@ Let's take the following situation: I want to describe a car. So I would say tha
 - ...has an engine.
 - ...and so on.
 
-If you look further at *car* components you'll find that most of them are common to other vehicles: a motor bike has also wheels and engine, *hasn't it*? ***Oh yeah, I would define a base class to all vehicles and...*** **NOOOOO!!** You wouldn't do that because there're vehicles that work without an engine! What about a bicycle??
+If you look further at *car* components you'll find that most of them are common to other vehicles: a motor bike has also wheels and engine, *hasn't it*? ***Oh yeah, I would define a base class to all vehicles and... **NOOOOO!!** ***You wouldn't do that because there're vehicles that work without an engine! What about a bicycle??***
 
 So what? *Interfaces!*:
 

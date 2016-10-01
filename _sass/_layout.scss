@@ -656,7 +656,7 @@ ul.tags {
     justify-content: space-between;
 
     .post-read-full-button {
-        width: 150px;
+        min-width: 150px;
         padding: 10px 10px;
         background-color: green;
         color: white;
@@ -671,13 +671,17 @@ ul.tags {
             margin-bottom: 30px;
             border: 3px dotted #ddd;
             padding: 15px 60px;
-            border-radius: 20px;
+            border-radius: 6px;
+
+            &:nth-child(2n) {
+                background-color: #fbfbfb;
+            }
 
             > {
                 aside {
                     display: flex;
                     flex-flow: row;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
                     border-bottom: 3px dotted #ddd;
                     padding-bottom: 10px;
@@ -700,6 +704,7 @@ ul.tags {
                         flex-flow: column;
                         justify-content: center;
                         align-items: center;
+                        flex-grow: 1;
                     }
                 }
             }

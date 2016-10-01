@@ -8,6 +8,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
+      {% assign index_modulo = forloop.index | modulo: 2 %}
       {% if post.categories contains "news" %}
       <li>
         <aside>
@@ -32,7 +33,7 @@ layout: default
           </div>
         </aside>
         <section class="post-brief"> 
-          <div class="post-content">{{ post.content | truncate: 350 }}</div>
+          <div class="post-content">{{ post.content | truncatewords: 80 }}</div>
           <a class="post-read-full-button" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
         </section>
       </li>
