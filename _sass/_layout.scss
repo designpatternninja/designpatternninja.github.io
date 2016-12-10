@@ -28,6 +28,9 @@
                 color: white;
                 text-shadow: -1px -1px 0 #822e2e, 1px -1px 0 #822e2e, -2px 1px 0 #822e2e, 1px 1px 0 #822e2e;
                 font-weight: bold;
+                display: flex;
+                justify-content: center;
+                flex-flow: column;
             }
         }
     }
@@ -36,8 +39,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        align-content: stretch;
         height: 100%;
+        flex-wrap: nowrap;
     }
 }
 
@@ -205,15 +208,20 @@
 }
 
 .page-heading {
-    font-size: 20px;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .post-list {
     margin-left: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     > li {
         margin-bottom: $spacing-unit;
+        max-width: 50vw;
     }
 }
 
