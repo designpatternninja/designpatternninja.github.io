@@ -7,6 +7,7 @@ categories:
    - architectural
    - language-agnostic
    - n-layer
+   - design-pattern
 authors: 
    - mfidemraizer
 permalink: /:categories/:title

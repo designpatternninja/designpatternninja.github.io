@@ -1,0 +1,49 @@
+---
+layout: catalogs
+title: Design pattern catalog
+---
+
+<section id="tabDesignPatterns">
+   {% for mainTag in site.mainTags %}
+   {% assign categoryCount = 0 %}
+	   {% for post in site.posts %}
+		   {% if post.categories contains "design-pattern" %}
+		   {% if post.categories contains mainTag %}
+		   		{% assign categoryCount = categoryCount | plus: 1 %}
+		   {% endif %}
+		   {% endif %}
+	   {% endfor %}
+	   
+   {% unless categoryCount == 0 %}
+   <div class="design-pattern">
+   <h3>{{mainTag| replace: "-", " "}} ({{categoryCount}})</h3>
+   <ol class="design-pattern-list">
+      {% for post in site.posts %}
+      {% if post.categories contains "design-pattern" %}
+      {% if post.categories contains mainTag %}
+      <li ng-class="{ 'selected': master.currentPath.indexOf('{{ post.title | slugify }}') > -1 }">
+         <a href="{{ post.url | prepend: site.baseurl }}">
+            <div class="md-list-item-text">
+               <h4>{{ post.title }}</h4>
+               <aside>
+                  <ul class="tags">
+                     {% for tag in post.categories %}
+                     {% unless tag == mainTag %}
+                     {% unless tag == "design-pattern" %}
+                     <li>{{tag}}</li>
+                     {% endunless %}
+                     {% endunless %}
+                     {% endfor %}
+                  </ul>
+               </aside>
+            </div>
+         </a>
+      </li>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+   </ol>
+   </div>
+   {% endunless %}
+   {% endfor %}
+</section>

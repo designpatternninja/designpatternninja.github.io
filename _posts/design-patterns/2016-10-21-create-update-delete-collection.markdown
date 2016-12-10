@@ -6,6 +6,7 @@ modifiedDate: 2016-10-30 00:00:00 +0100
 categories:
    - architectural
    - language-agnostic
+   - design-pattern
 authors: 
    - mfidemraizer
 permalink: /:categories/:title

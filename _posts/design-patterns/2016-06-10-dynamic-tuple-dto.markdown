@@ -10,6 +10,7 @@ categories:
    - strong-typing
    - dynamic-typing
    - duck-typing
+   - design-pattern
 authors: 
    - mfidemraizer
 permalink: /:categories/:title

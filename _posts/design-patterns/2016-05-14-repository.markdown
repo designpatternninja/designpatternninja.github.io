@@ -7,6 +7,7 @@ categories:
     - language-agnostic
     - object-mapping
     - domain-driven-design
+    - design-pattern
 authors: 
    - eevans
    - mfidemraizer

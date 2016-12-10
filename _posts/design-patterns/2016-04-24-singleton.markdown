@@ -6,6 +6,7 @@ modifiedDate:   2016-04-24 00:00:00 +0100
 categories:
        - creational
        - language-agnostic
+       - design-pattern
 authors: 
    - anonymous
    - mfidemraizer

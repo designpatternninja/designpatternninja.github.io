@@ -2,11 +2,12 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid #424242;
-    border-bottom: 1px solid #ddd;
+    border-top: 5px solid #7b171a;
+    border-bottom: 2px dotted #9a3234;
     min-height: 56px;
     background-color: #eee;
     position: relative;
+    box-shadow: 0 0 0 4px white inset;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -19,8 +20,9 @@
 
         a {
             padding-right: 2rem;
-            font-weight: lighter;
+            font-weight: bold;
             color: #444;
+            font-size: 1.2em;
 
             &.site-title {
                 color: white;
@@ -28,6 +30,14 @@
                 font-weight: bold;
             }
         }
+    }
+
+    .trigger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+        height: 100%;
     }
 }
 
@@ -433,9 +443,9 @@ ul.tags {
 }
 
 .content-wrapper {
-    min-width: 0;
     padding-left: 3vw;
     padding-right: 3vw;
+    flex: 1;
 
     article {
         > header, > .post-content {
@@ -714,4 +724,19 @@ ul.tags {
 
 .post .tags li {
     margin-bottom: 10px
+}
+
+#tabDesignPatterns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .design-pattern {
+        min-width: 20vw;
+    }
+}
+
+a.page-link.selected {
+    color: #9a3234;
+    text-decoration: underline;
 }
