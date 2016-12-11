@@ -24,14 +24,20 @@
             color: #444;
             font-size: 1.2em;
 
-            &.site-title {
-                color: white;
-                text-shadow: -1px -1px 0 #822e2e, 1px -1px 0 #822e2e, -2px 1px 0 #822e2e, 1px 1px 0 #822e2e;
-                font-weight: bold;
-                display: flex;
-                justify-content: center;
-                flex-flow: column;
+                &.site-title {
+            color: white;
+            text-shadow: -1px -1px 0 #822e2e, 1px -1px 0 #822e2e, -2px 1px 0 #822e2e, 1px 1px 0 #822e2e;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            flex: 1;
+            align-items: center;
+
+            img {
+            max-width: 22vw;
             }
+        }
         }
     }
 
@@ -62,7 +68,13 @@
     line-height: 56px;
 
     .menu-icon {
-        display: none;
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;    
     }
 
     .page-link {
@@ -174,26 +186,7 @@
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
 
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
 
 
 
@@ -254,10 +247,6 @@
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
 }
 
 .post .post-title {
@@ -269,26 +258,14 @@
 
     h2 {
         font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
     }
 
     h3 {
         font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
     }
 
     h4 {
         font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
     }
 }
 
@@ -747,4 +724,16 @@ ul.tags {
 a.page-link.selected {
     color: #9a3234;
     text-decoration: underline;
+}
+
+.trigger {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+.trigger .page-link {
+    margin: 10px 0;
 }

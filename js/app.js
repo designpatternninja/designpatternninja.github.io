@@ -5,10 +5,14 @@
 
 	});
 
-	app.controller("MasterController", function($scope, $http) {
+	app.controller("MasterController", function($scope, $http, $mdSidenav) {
 		this.issues = [];
 		this.patterns = {};
 		var that = this;
+
+		this.openMenu = function() {
+			$mdSidenav("appMenu").toggle();
+		};
 
 
 		this.currentPath = window.location.pathname;
