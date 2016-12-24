@@ -374,6 +374,10 @@ aside {
     }
 }
 
+[md-component-id="appMenu"] {
+        background: radial-gradient(ellipse at center, rgba(255,255,255,1) 55%,rgba(230,230,230,1) 100%);
+}
+
 ul.tags {
     margin: 0;
     display: flex;
@@ -650,7 +654,6 @@ ul.tags {
 
 .post-content {
     padding-top: 20px;
-    margin-right: 20px;
 }
 
 .post-author {
@@ -669,6 +672,7 @@ ul.tags {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-flow: column wrap;
 
     .post-read-full-button {
         min-width: 150px;
@@ -684,9 +688,10 @@ ul.tags {
    > {
         li {
             margin-bottom: 30px;
-            border: 3px dotted #ddd;
+            border: 2px solid #fefefe;
             padding: 15px 60px;
             border-radius: 6px;
+            box-shadow: 0 0 12px #eee;
 
             &:nth-child(2n) {
                 background-color: #fbfbfb;
@@ -695,7 +700,7 @@ ul.tags {
             > {
                 aside {
                     display: flex;
-                    flex-flow: row;
+                    flex-flow: column;
                     justify-content: space-between;
                     align-items: center;
                     border-bottom: 3px dotted #ddd;
@@ -714,12 +719,12 @@ ul.tags {
                     }
 
                     div:last-child {
-                        margin-left: 50px;
                         display: flex;
                         flex-flow: column;
                         justify-content: center;
                         align-items: center;
                         flex-grow: 1;
+                        text-align: center;
                     }
                 }
             }
@@ -762,4 +767,9 @@ a.page-link.selected {
 
 .trigger .page-link {
     margin: 10px 0;
+    color: #60292a;
+}
+
+.trigger .page-link:visited {
+    color: #60292a;
 }
