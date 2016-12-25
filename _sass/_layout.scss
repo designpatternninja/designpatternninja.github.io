@@ -616,6 +616,8 @@ ul.tags {
 
 .post .post-header {
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .post-header {
