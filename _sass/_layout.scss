@@ -267,6 +267,7 @@
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+    text-align: center;
 }
 
 .post .post-title {
@@ -618,6 +619,7 @@ ul.tags {
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 .post-header {
