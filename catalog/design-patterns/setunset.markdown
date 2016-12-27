@@ -9,7 +9,6 @@ categories:
    - design-pattern
 authors: 
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 ### Brief description

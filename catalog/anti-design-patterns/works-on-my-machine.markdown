@@ -9,7 +9,6 @@ categories:
 authors: 
    - anonymous
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 ### Brief description

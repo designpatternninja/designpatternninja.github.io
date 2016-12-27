@@ -8,7 +8,6 @@ categories:
     - project-management
 authors: 
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 ### Brief description

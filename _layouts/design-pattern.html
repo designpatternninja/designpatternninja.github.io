@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: pretty
 ---
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting" ng-init="master.postTags = [{% for tag in page.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">

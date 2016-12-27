@@ -2,6 +2,7 @@
 layout: page
 title: Contribute
 permalink: /contribute/
+categories: app-menu
 ---
 
 This is a community-driven, open catalog of software design patterns. 

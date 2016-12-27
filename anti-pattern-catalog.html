@@ -1,12 +1,13 @@
 ---
 layout: catalogs
 title: Anti-design pattern catalog
+categories: app-menu
 ---
 
 <section id="tabDesignPatterns">
    {% for mainTag in site.mainTags %}
    {% assign categoryCount = 0 %}
-	   {% for post in site.posts %}
+	   {% for post in site.pages %}
 		   {% if post.categories contains "anti-pattern" %}
 		   {% if post.categories contains mainTag %}
 		   		{% assign categoryCount = categoryCount | plus: 1 %}
@@ -18,11 +19,11 @@ title: Anti-design pattern catalog
    <div class="design-pattern">
    <h3>{{ mainTag| replace: "-", " " }} ({{ categoryCount }})</h3>
    <ol class="design-pattern-list">
-      {% for post in site.posts %}
+      {% for post in site.pages %}
       {% if post.categories contains "anti-pattern" %}
       {% if post.categories contains mainTag %}
       <li ng-class="{ 'selected': master.currentPath.indexOf('{{ post.title | slugify }}') > -1 }">
-         <a href="{{ post.url | prepend: site.baseurl }}">
+         <a href="{{ post.url | replace:'.html','' | prepend: site.baseurl }}">
             <div class="md-list-item-text">
                <h4>{{ post.title }}</h4>
                <aside>

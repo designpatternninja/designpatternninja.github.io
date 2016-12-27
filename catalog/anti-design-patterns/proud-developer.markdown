@@ -8,7 +8,6 @@ categories:
     - behavioral
 authors: 
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 ### Brief description

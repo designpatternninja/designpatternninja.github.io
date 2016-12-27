@@ -11,7 +11,6 @@ categories:
 authors: 
    - eevans
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 ### Brief description
