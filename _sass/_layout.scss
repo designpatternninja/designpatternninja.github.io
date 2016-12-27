@@ -778,3 +778,16 @@ a.page-link.selected {
 .trigger .page-link:visited {
     color: #60292a;
 }
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    
+    .previous-post {
+
+    }
+
+    .next-post {
+
+    }
+}
