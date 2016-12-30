@@ -6,7 +6,6 @@ modifiedDate: 2016-09-30 00:00:00 +0100
 categories: news
 authors: 
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 Undoubtedly if you've already worked with any strongly-typed object-oriented programming language, you should also know that there's a good friend called *interface* and maybe you've implemented some one but you've never found an use case to define one yourself. Perhaps you've both implemented and defined *interfaces*, **but it's worth the effort digging into this topic and discuss some points.**

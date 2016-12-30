@@ -6,7 +6,6 @@ modifiedDate: 2016-12-26 00:00:00 +0100
 categories: news
 authors: 
    - mfidemraizer
-permalink: /:categories/:title
 ---
 
 While many experienced developers with deep knowledge and skills about object-oriented programming will say *this article is for dummies*, but while you might feel that it's a too basic question, I've found too many professionals that won't choose the right path when defining object graphs.
