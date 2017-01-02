@@ -218,10 +218,16 @@
     flex-flow: row;
     align-items: stretch;
     padding: $spacing-unit 0;
+
+    .content-wrapper {
+        background-color: white;
+        border-radius: 4px;
+        padding-top: 50px;
+    }
 }
 
 .page-heading {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -233,8 +239,6 @@
     justify-content: center;
 
     > li {
-        margin-bottom: $spacing-unit;
-        max-width: 50vw;
     }
 }
 
@@ -287,6 +291,11 @@
 
     h4 {
         font-size: 20px;
+    }
+
+    img {
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -457,6 +466,8 @@ ul.tags {
     padding-right: 3vw;
     flex: 1;
     overflow: hidden;
+    max-width: 70vw;
+    margin: 0 auto;
 
     article {
         > header, > .post-content {
@@ -692,11 +703,12 @@ ul.tags {
 .post-list {
    > {
         li {
-            margin-bottom: 30px;
-            border: 2px solid #fefefe;
+            margin-bottom: $spacing-unit;
+            border: 10px solid white;
             padding: 15px 60px;
-            border-radius: 6px;
-            box-shadow: 0 0 12px #eee;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px #f8e2e2 inset;
+            background-color: white;
 
             &:nth-child(2n) {
                 background-color: #fbfbfb;
@@ -755,6 +767,10 @@ ul.tags {
     #tabDesignPatterns {
         flex-flow: column wrap;
     }
+
+    .content-wrapper {
+        max-width: initial !important;
+    }
 }
 
 a.page-link.selected {
@@ -773,6 +789,7 @@ a.page-link.selected {
 .trigger .page-link {
     margin: 10px 0;
     color: #60292a;
+    text-decoration: none !important;
 }
 
 .trigger .page-link:visited {
