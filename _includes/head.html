@@ -10,7 +10,12 @@
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'.html','' }}" />
+  {% case page.layout %}
+  {% when "post" %}
+  <meta property="og:image" content="{{ site.url }}/img/news/headers/{{ page.title | slugify }}.jpg" />
+  {% else %}
   {% unless page.featuredImage == nil %}<meta property="og:image" content="{{ site.url }}{{ page.featuredImage }}" />{% endunless %}
+  {% endcase %}
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.6/angular-material.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-animate.min.js"></script>

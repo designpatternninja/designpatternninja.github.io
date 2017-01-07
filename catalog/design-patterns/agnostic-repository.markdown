@@ -21,7 +21,7 @@ A [repository variant (see Repository design pattern)](/catalog/design-patterns/
 
 Basically all modern object-oriented programming language doesn't support multi-inheritance. While this is a good constraint to avoid *design smells*, it imposes some limitation on some use cases.
 
-For example, let's say we want to be able to code a [Repository design pattern)](/catalog/design-patterns/repository){:target="_blank"} implementation which could be both use a given *data mapper* and also be specialized in derived classes by overridding polymoprhic methods, but provide such specializations without coupling them to a particular *data mapper*.
+For example, let's say we want to be able to code a [Repository design pattern](/catalog/design-patterns/repository){:target="_blank"} implementation which could be both use a given *data mapper* and also be specialized in derived classes by overridding polymoprhic methods, but provide such specializations without coupling them to a particular *data mapper*.
 
 See the following code to get convinced about it's not possible to specialize repositories this way and with simple inheritance:
 
