@@ -474,7 +474,7 @@ ul.tags {
     padding-right: 3vw;
     flex: 1;
     overflow: hidden;
-    max-width: 70vw;
+    max-width: 85vw;
     margin: 0 auto;
 
     article {
@@ -834,7 +834,6 @@ a.page-link.selected {
 
             .page-link {    
                 display: flex;
-                flex: 0.2;
                 align-items: center;
                 justify-content: center;
                 font-size: 1.1rem;
@@ -933,7 +932,6 @@ a.page-link.selected {
     flex: 1;
     padding: 20px 5px;
     margin-left: 30px;
-    min-width: 420px;
 
     .post-list {
         flex-flow: column;
