@@ -115,4 +115,5 @@ A possible singleton implementation would look as follows:
             return this._instance;
         }
     }
+    
 There is no built-in approach to avoid creating more instances and, in the other hand, there is no way to prevent the singleton class from being derived in many other classes or extended using prototypal inheritance without syntactic sugar.

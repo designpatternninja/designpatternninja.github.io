@@ -230,6 +230,7 @@
         padding-top: 50px;
         border: 1px dashed #7c171b;
         padding-bottom: 50px;
+        flex-flow: row nowrap;
     }
 }
 
@@ -762,7 +763,7 @@ ul.tags {
 
 #tabDesignPatterns {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     .design-pattern {
@@ -840,5 +841,75 @@ a.page-link.selected {
                 font-weight: normal;
             }
         }
+    }
+
+    .content-wrapper {
+        display: flex;
+
+        #quickLaunch {
+            display: flex;
+            flex: 1;
+
+            h3:first-child {
+                margin-bottom: 15px;
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            #latestNews {
+                .post-list {
+                    > li {
+                        margin-bottom: initial;
+
+                        aside {
+                            border: initial;
+
+                            img {
+                                width: 20px;
+                            }
+
+                            .post-link {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #latestDesignPatterns {
+                margin-top: 20px;
+                
+                time {
+                    font-size: 0.9rem;
+                    color: #888;
+                    margin-bottom: 6px;
+                }
+            }
+
+            #latestDesignPatterns, #latestNews {
+                padding: 30px;
+                border: 1px dashed #82191c;
+            }
+        }
+
+        > div {
+            flex: 2;
+        }
+    }
+}
+
+#quickLaunch
+{
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    order: 9999;
+    flex: 1;
+    padding: 20px 5px;
+    margin-left: 30px;
+    min-width: 420px;
+
+    .post-list {
+        flex-flow: column;
     }
 }
