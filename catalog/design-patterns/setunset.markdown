@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title:  "Set-unset value"
+excerpt: Proper approach to transport object association changes across software boundaries.
 date:   2016-10-21 00:00:00 +0100
 modifiedDate: 2016-10-21 00:00:00 +0100
 categories:

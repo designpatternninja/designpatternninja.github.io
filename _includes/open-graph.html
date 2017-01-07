@@ -1,0 +1,16 @@
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'.html','' }}" />
+  {% case page.layout %}
+  {% when "post" %}
+  <meta property="og:image" content="{{ site.url }}/img/news/headers/{{ page.title | slugify }}.jpg" />
+  {% else %}
+  {% case page.featuredImage %}
+  {% when nil %}
+  <meta property="og:image" content="{{ site.url }}/img/designpatternninja_logo.png" />
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}{{ page.featuredImage }}" />
+  {% endcase %}
+  {% endcase %}

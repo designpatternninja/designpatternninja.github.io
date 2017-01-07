@@ -1,6 +1,7 @@
 ---
 layout: post
 title: .NET Framework goes nowhere
+excerpt: Is .NET Framework about to become a legacy technology?
 date: 2017-01-05 00:00:00 +0100
 modifiedDate: 2017-01-05 00:00:00 +0100
 categories: news

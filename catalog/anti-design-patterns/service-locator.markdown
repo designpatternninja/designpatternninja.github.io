@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Service locator
+excerpt: A wrong approach to implement inversion of control-based solutions.
 date: 2016-05-22 00:00:00 +0100
 modifiedDate: 2016-05-22 00:00:00 +0100
 categories:

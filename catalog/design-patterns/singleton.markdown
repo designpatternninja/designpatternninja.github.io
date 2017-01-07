@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Singleton
+excerpt: An approach to constraint a class to produce a single instance within the life-time of a given system.
 date: 2016-04-24 00:00:00 +0100
 modifiedDate:   2016-04-24 00:00:00 +0100
 categories:

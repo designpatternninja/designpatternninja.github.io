@@ -13,12 +13,19 @@
     </nav>
 
     <a class="site-title" href="{{ site.baseurl }}/"><img src="/img/designpatternninja_logo.png"></a>
+    {% for currentPage in site.pages reversed %}
+    {% if currentPage.title %}
+    {% if currentPage.categories contains "app-menu" %}
+    <a class="page-link {% if currentPage.title contains page.title %}selected{% endif %}" href="{{ currentPage.url | prepend: site.baseurl | replace: '.html','' }}">{{ currentPage.title }}</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
 
   </div>
 
 </header>
 
-<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="appMenu">
+<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="appMenu" ng-cloak>
 
 
 

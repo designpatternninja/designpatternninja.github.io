@@ -70,6 +70,12 @@
     }
 }
 
+@media (min-width: 801px) {
+    .site-nav {
+        display: none !important;
+    }
+}
+
 .site-title {
     font-size: 26px;
     font-weight: 300;
@@ -806,5 +812,30 @@ a.page-link.selected {
 
     .next-post {
 
+    }
+}
+
+.site-header {
+    .wrapper {
+        .page-link {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:1025px) {
+    .site-header {
+        .wrapper {
+            .site-title {
+                flex: initial !important;
+            }
+            
+            .page-link {    
+                display: flex;
+                flex: 0.3;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 }

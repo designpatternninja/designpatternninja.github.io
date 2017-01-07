@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Proud developer
+excerpt: A software development professional which cannot accept that work made by others is as valid as (or even better than) the one done by himself/herself.
 date: 2016-05-08 00:00:00 +0100
 modifiedDate: 2016-05-08 00:00:00 +0100
 categories:

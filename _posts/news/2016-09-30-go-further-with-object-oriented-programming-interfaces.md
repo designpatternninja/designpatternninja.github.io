@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Go further with interfaces in object-oriented programming
+excerpt: If you want to go further with object-oriented programming you should also leverage interfaces.
 date: 2016-09-30 00:00:00 +0100
 modifiedDate: 2016-09-30 00:00:00 +0100
 categories: news

@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Copy-paste programming
+excerpt: One of worst software anti-patterns consisting in avoiding abstraction and encapsulation by copy-pasting a solution all over the place.
 date: 2016-05-08 00:00:00 +0100
 modifiedDate: 2016-05-08 00:00:00 +0100
 categories:

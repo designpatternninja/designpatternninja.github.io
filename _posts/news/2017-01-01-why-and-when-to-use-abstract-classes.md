@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why and when to use abstract classes
+excerpt: You've used many abstract classes, but maybe you don't find an use case to implement your own abstract classes.
 date: 2017-01-01 00:00:00 +0100
 modifiedDate: 2017-01-01 00:00:00 +0100
 categories: news

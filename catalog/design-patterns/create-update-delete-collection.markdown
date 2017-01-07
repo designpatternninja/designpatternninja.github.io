@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title:  "Create-Update-Delete collection"
+excerpt: Proper approach to design a DTO to transport collection changes across software boundaries.
 date:   2016-10-30 00:00:00 +0100
 modifiedDate: 2016-10-30 00:00:00 +0100
 categories:

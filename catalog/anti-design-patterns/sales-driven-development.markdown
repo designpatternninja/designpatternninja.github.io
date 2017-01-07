@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Sales-driven development
+excerpt: A software project led by sales managers and their priorities
 date: 2016-09-24 00:00:00 +0100
 modifiedDate: 2016-09-24 00:00:00 +0100
 categories:

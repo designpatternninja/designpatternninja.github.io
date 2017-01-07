@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My top five worst software developer behaviors
+excerpt: Some software development colleagues' behaviors are odd or unacceptable... Do you want to know them?
 date: 2017-01-02 00:00:00 +0100
 modifiedDate: 2017-01-02 00:00:00 +0100
 categories: news

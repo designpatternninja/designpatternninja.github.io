@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Works on my machine
+excerpt: A software developer argues that something that has already implemented works just because it worked on his/her development machine.
 date: 2016-05-17 00:00:00 +0100
 modifiedDate: 2016-05-17 00:00:00 +0100
 categories:
@@ -13,7 +14,7 @@ authors:
 
 ### Brief description
 
-A software developer argues that something that has already implemented works just because it worked on his development machine, even when someone has told that it doesn't work on a development server and/or production server, or in some co-worker machine. 
+A software developer argues that something that has already implemented works just because it worked on his/her development machine, even when someone has told that it doesn't work on a development server and/or production server, or in some co-worker machine. 
 
 ### What causes it
 

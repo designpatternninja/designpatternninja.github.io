@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title:  "Accumulated result"
+excerpt: Proper approach to design a DTO to transport cross-layer results.
 date:   2016-03-12 17:47:10 +0100
 modifiedDate: 2016-03-12 17:47:10 +0100
 categories:

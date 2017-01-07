@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Agnostic repository
+excerpt: A repository variant completely agnostic to data-mapping technology.
 date: 2017-01-06 00:00:00 +0100
 modifiedDate: 2017-01-06 00:00:00 +0100
 categories:

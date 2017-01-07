@@ -4,6 +4,7 @@ title: About the convenience of design patterns
 date: 2016-06-05 00:00:00 +0100
 modifiedDate: 2016-06-05 00:00:00 +0100
 categories: news
+excerpt: "This discussion is a good start for this new site called *Design Pattern NINJA*, isn't it?"
 authors: 
    - mfidemraizer
 ---

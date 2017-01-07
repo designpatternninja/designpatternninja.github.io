@@ -1,6 +1,7 @@
 ---
 layout: design-pattern
 title: Repository
+excerpt: A collection-like interface to translate domain objects to data and vice versa.
 date: 2016-05-16 00:00:00 +0100
 modifiedDate: 2016-05-16 00:00:00 +0100
 categories:

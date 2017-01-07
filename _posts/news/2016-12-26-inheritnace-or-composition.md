@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inheritance or composition?
+excerpt: When to prefer class inheritance or composition? Let's talk about it.
 date: 2016-12-26 00:00:00 +0100
 modifiedDate: 2016-12-26 00:00:00 +0100
 categories: news

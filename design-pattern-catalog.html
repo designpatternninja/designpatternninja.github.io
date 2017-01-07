@@ -23,7 +23,7 @@ categories: app-menu
       {% if post.categories contains "design-pattern" %}
       {% if post.categories contains mainTag %}
       <li ng-class="{ 'selected': master.currentPath.indexOf('{{ post.title | slugify }}') > -1 }">
-         <a href="{{ post.url | replace:'.html','' | prepend: site.baseurl }}">
+         <a href="{{ post.url | replace:'.html','' | prepend: site.baseurl }}" title="{{ post.title }}">
             <div class="md-list-item-text">
                <h4>{{ post.title }}</h4>
                <aside>
