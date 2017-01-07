@@ -11,7 +11,7 @@
       <div class="content-wrapper">
         <aside id="quickLaunch">
             <section id="latestNews">
-                  <h3>Latest headlines</h3>
+                  <h3><md-icon md-font-icon="update" aria-label="update">update</md-icon>Latest headlines</h3>
                   <ul class="post-list">
                   {% for post in site.posts limit:5 %}
                     {% assign index_modulo = forloop.index | modulo: 2 %}
@@ -43,7 +43,7 @@
                   </ul>
             </section>
             <section id="latestDesignPatterns">
-                <h3>Latest design patterns</h3>
+                <h3><md-icon md-font-icon="alarm_on" aria-label="alarm_on">alarm_on</md-icon>Latest design patterns</h3>
                 <ol class="design-pattern-list">
                 {% assign sortedPages = site.pages | sort:"date" | reverse | where:"categories","design-pattern" %}
                 {% for post in sortedPages limit:5 %}
