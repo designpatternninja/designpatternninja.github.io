@@ -848,6 +848,8 @@ a.page-link.selected {
         #quickLaunch {
             display: flex;
             flex: 1;
+            flex-flow: column;
+            align-items: stretch;
 
             h3:first-child {
                 margin-bottom: 15px;
@@ -917,8 +919,9 @@ a.page-link.selected {
             }
         }
 
-        > div {
+        > div, article {
             flex: 2;
+            min-width: 50vw;
         }
     }
 }
