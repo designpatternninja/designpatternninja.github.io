@@ -897,11 +897,16 @@ a.page-link.selected {
                     color: #888;
                     margin-bottom: 6px;
                 }
+
+                .design-pattern-list {
+                    margin: 0 10px;
+                }
             }
 
             #latestDesignPatterns, #latestNews {
-                padding: 30px;
+                padding: 20px 0;
                 border: 1px dashed #82191c;
+                border-radius: 4px;
 
                 h3 {
                     display: flex;
@@ -921,7 +926,7 @@ a.page-link.selected {
 
         > div, article {
             flex: 2;
-            min-width: 50vw;
+            min-width: 60vw;
         }
     }
 }
