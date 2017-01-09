@@ -655,7 +655,7 @@ ul.tags {
             aside {
                 > {
 
-                    div:last-child {
+                    #contributors {
                         margin-top: 25px;
                         display: flex;
                         align-items: center;
@@ -670,11 +670,28 @@ ul.tags {
                             }
                         }
                     }
+
+                    #social {
+                        margin-top: 40px;
+
+                    }
                 }
             }
         }
     }
 }
+
+
+
+                    #social {
+                        display: flex;
+                        justify-content: center;
+
+                        > span {
+                            margin-right: 10px;
+                        }
+
+                    }
 
 .post-content {
     padding-top: 20px;
