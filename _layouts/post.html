@@ -14,13 +14,13 @@ permalink: pretty
   </div>
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting" ng-init="postTags = [{% for tag in page.categories %} {{ tag | prepend: "'" | append: "'," }} {% endfor %}]" ng-init="readOnly = true">
     <header class="post-header" style="background-image: url(/img/news/headers/{{ page.title | slugify | replace: "news-", "news/" }}.jpg)">
-        <div>
+      <div>
         <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
 
          <aside>
-                  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
 
-                  <div>
+                <div id="contributors">
                   {% unless site.contributors[page.authors.first].avatarUrl contains "/img/" %}
                   <img src="{{ site.contributors[page.authors.first].avatarUrl }}&s=30">
                   {% endunless %}
@@ -28,6 +28,14 @@ permalink: pretty
                   <img class="avatar-30" src="{{ site.contributors[page.authors.first].avatarUrl }}">
                   {% endif %}
                   <a href="{{ site.contributors[page.authors.first].siteUrl }}" target="_blank">{{ site.contributors[page.authors.first].fullName }}</a>
+                </div>
+
+                <div id="social">
+                    <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+<script type="IN/Share" data-counter="right" data-url="{{ site.url }}{{ page.url }}"></script>
+                  <div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
                 </div>
           </aside>
         </div>
