@@ -17,12 +17,21 @@ permalink: pretty
 
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
 
+
+
        <aside>
             <ul class="tags">
                 {% for tag in page.categories %}
                 <li>{{tag}}</li>
                 {% endfor %}
             </ul>
+    <div id="social">
+        <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+<script type="IN/Share" data-counter="right" data-url="{{ site.url }}{{ page.url }}"></script>
+      <div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
         </aside>
 
     <table class="post-metadata">

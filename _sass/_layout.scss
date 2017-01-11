@@ -655,7 +655,7 @@ ul.tags {
             aside {
                 > {
 
-                    div:last-child {
+                    #contributors {
                         margin-top: 25px;
                         display: flex;
                         align-items: center;
@@ -670,11 +670,28 @@ ul.tags {
                             }
                         }
                     }
+
+                    #social {
+                        margin-top: 40px;
+
+                    }
                 }
             }
         }
     }
 }
+
+
+
+                    #social {
+                        display: flex;
+                        justify-content: center;
+
+                        > span {
+                            margin-right: 10px;
+                        }
+
+                    }
 
 .post-content {
     padding-top: 20px;
@@ -763,7 +780,7 @@ ul.tags {
 
 #tabDesignPatterns {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     .design-pattern {
@@ -948,4 +965,29 @@ a.page-link.selected {
 
 .catalog {
     flex: 2;
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+#blog-rss-feed {
+    color: #444;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    md-icon {
+        color: #ec4817;
+        font-size: 2rem;
+        margin: 0;
+        height: 35px;
+    }
 }
