@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contribute
+excerpt: If you love software development, you've tons of ideas to share good practices. Contribute to Design Pattern NINJA today! 
 permalink: /contribute/
 categories: app-menu
 ---
