@@ -10,7 +10,7 @@ This is a community-driven, open catalog of software design patterns.
 
 Currently the entire site is built on top of [Jekyll](http://jekyllrb.com).
 
-Our main goal is cataloging as many design patterns as possible, and not only the most famous ones, but it's a place where anyone can publish new and invented design patterns and/or improve existing ones.
+Our main goal is to catalog as many design patterns and anti-patterns as possible, and not only the most famous ones, but it's a place where anyone can publish new and invented design patterns and/or improve existing ones.
 
 ## What is the goal of this project?
 
@@ -24,7 +24,7 @@ In summary, our goal is turning the *quality software* into an open resource to 
 
 ### Why "ninja"?
 
-Call it ninja, *guru*, *expert*. This is a repository full of design pattern ninjas! ;)
+*Ninja*, *guru*, *expert*. This is a repository full of design pattern ninjas! ;)
 
 ## How do I contribute?
 
@@ -34,17 +34,24 @@ Call it ninja, *guru*, *expert*. This is a repository full of design pattern nin
 2. Add new design patterns or modify existing ones following the conventions (take any already published design pattern as sample).
 3. Once you have already done your work, you will need to *commit* it to your local repository: `git commit`. Please, provide a commit title/description that briefly-explains what you are contributing.
 4. Now *push* your local repository changes to your remote repository on GitHub: `git push`.
-5. Open a pull request to merge your contribution with our master branch.
+5. Open a pull request to merge your contribution to our master branch.
 
 In the other hand, if you want to discuss how to improve or fix some design pattern, or you want to start a philosophical discussions to criticize or create a new design pattern, we have a very powerful yet easy to use tool: [the GitHub repository's built-in issue tracker](https://github.com/designpatternninja/designpatternninja.github.io/issues). Publish issues and we will look forward for your concerns there all together!
+
+## What to contribute
+
+In Design Pattern NINJA you can already contribute with:
+
+1. Design patterns and anti-patterns.
+2. News articles. 
 
 ## Contribution conventions
 
 * All contributions must be in English language.
 * They must be formatted using markdown.
 * They must not be patented or copyrighted design patterns or copy-pasted articles. We only accept genuine content. You can still contribute with existing design patterns specifying who is the original creator, but the design pattern explanation must be yours.
-* Any contribution must fit well in a single markdown file, and the whole file name must be the design pattern name prefixed with the publishing date (for example: *2016-03-24-Service-layer.md*) and it must live within `./_posts` repository directory.
-* Any image or embedded resource must be placed in a directory within `./img` with the same name as the main markdown file excluding the publishing date (for example: `Service-layer`). Also, we do not accept external resources: all resources should be uploaded to the respository.
+* Any contribution must fit well in a single markdown file, and the whole file name must be the design pattern name prefixed and it must live within `./catalog/design-patterns`, `./catalog/anti-patterns` or `./_news`  repository directories.
+* Any image must be placed in a directory within `./img` with the same name as the main markdown. When we talk about news articles, they should be placed within `./img/news` article. News article's headers must be within `./img/news/headers` where the header image file must be the slugified article's title in JPG format. Design patterns and anti-patterns images must be placed in the root `./img` directory, creating subdirectories where their names will be the whole patterns' names.
 * You should provide as many information as possible, but design patterns should be just *defined*: each design pattern should not look like an encyclopedia (we want to avoid readers be on *Too Long, Don't Read* case...).
 * All contributed content will be available using [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 * Bibliography or references are optional. But if your work is based on some other one, you must reference the source of your work with links.
