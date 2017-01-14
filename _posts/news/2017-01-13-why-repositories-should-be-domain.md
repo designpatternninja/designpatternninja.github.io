@@ -71,7 +71,7 @@ public abstract class Repository<T> : IRepository<T>
 
 Hence, because both contract and abstract implementation aren't specific to a *domain*, we would conclude that ***they should be an infrastructure concern*** (and so they're!).
 
-My other conclusion is that **above described approach is an implementation detail, and it's necessarily the repository pattern *per se*** even when I would really advocate to always define a repository pattern interface and a basic abstract class to avoid repeating yourself across your project when you need to implement things that should affect it entirely.
+My other conclusion is that **above described approach is an implementation detail, and it's not necessarily the repository pattern *per se*** even when I would really advocate to always define a repository pattern interface and a basic abstract class to avoid repeating yourself across your project when you need to implement things that should affect it entirely.
 
 ### Let's move on to the next and definitive argument
 
