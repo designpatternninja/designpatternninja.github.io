@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Good software architecture, since more than 40 years
-excerpt: "Software development started since more than 40 years ago. Does our legacy should thrown away to reinvent the wheel every year?"
+excerpt: "Software development started more than 40 years ago. Does our legacy should thrown away to reinvent the wheel every year, everyday?"
 date: 2017-01-18 00:00:00 +0100
 modifiedDate: 2017-01-18 00:00:00 +0100
 categories: news
