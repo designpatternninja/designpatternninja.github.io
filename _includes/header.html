@@ -13,7 +13,8 @@
     </nav>
 
     <a class="site-title" href="{{ site.baseurl }}/"><img src="/img/designpatternninja_logo.png"></a>
-    {% for currentPage in site.pages reversed %}
+    {% assign sortedPages = site.pages | sort:"order" %}
+    {% for currentPage in sortedPages %}
     {% if currentPage.title %}
     {% if currentPage.categories contains "app-menu" %}
     <a class="page-link {% if currentPage.title contains page.title %}selected{% endif %}" href="{{ currentPage.url | prepend: site.baseurl | replace: '.html','' }}">{{ currentPage.title }}</a>

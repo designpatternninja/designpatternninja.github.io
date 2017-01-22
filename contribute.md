@@ -4,6 +4,7 @@ title: Contribute
 excerpt: If you love software development, you've tons of ideas to share good practices. Contribute to Design Pattern NINJA today! 
 permalink: /contribute/
 categories: app-menu
+order: 3
 ---
 
 This is a community-driven, open catalog of software design patterns. 
