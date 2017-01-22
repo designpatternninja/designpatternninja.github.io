@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign author = page.path | replace:".md","" | split:"/" | last %}
+
+<article class="bio">
+
+	
+  <header class="bio-header">
+	{% unless site.contributors[author].avatarUrl contains "/img/" %}
+	<img class="avatar" src="{{ site.contributors[author].avatarUrl }}&s=30">
+	{% endunless %}
+	{% if site.contributors[author].avatarUrl contains "/img/" %}
+	<img class="avatar avatar-30" src="{{ site.contributors[author].avatarUrl }}">
+	{% endif %}
+    <h1 class="bio-title">{{ page.fullName }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
