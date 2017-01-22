@@ -37,6 +37,8 @@ In summary, our goal is turning the *quality software* into an open resource to 
 4. Now *push* your local repository changes to your remote repository on GitHub: `git push`.
 5. Open a pull request to merge your contribution to our master branch.
 
+**Probably you'll want to preview your collaboration while you compose it**. As DesignPatternNINJA has been built using Jekyll and it's hosted on GitHub Pages, [please follow these steps to install Jekyll on your own machine](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll){:target="_blank"}.
+
 In the other hand, if you want to discuss how to improve or fix some design pattern, or you want to start a philosophical discussions to criticize or create a new design pattern, we have a very powerful yet easy to use tool: [the GitHub repository's built-in issue tracker](https://github.com/designpatternninja/designpatternninja.github.io/issues). Publish issues and we will look forward for your concerns there all together!
 
 ## What to contribute

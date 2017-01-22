@@ -245,6 +245,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: stretch;
+    flex-flow: column;
 
     > li {
         flex-grow: 1;
@@ -731,7 +732,7 @@ ul.tags {
         li {
             margin-bottom: $spacing-unit;
             border: 10px solid white;
-            padding: 15px 60px;
+            padding: 15px 20px;
             border-radius: 2px;
             box-shadow: 0 0 0 1px #f8e2e2 inset;
             background-color: white;
@@ -747,8 +748,8 @@ ul.tags {
                     justify-content: space-between;
                     align-items: center;
                     border-bottom: 3px dotted #ddd;
-                    padding-bottom: 10px;
                     padding-top: 10px;
+                    background-size: cover;
 
                     .post-author {
                         > {
@@ -758,6 +759,14 @@ ul.tags {
                                 justify-content: center;
                                 align-items: center;
                             }
+                        }
+                    }
+
+                    > {
+                        .header-wrapper {
+                            padding: 10px;
+                            width: 80%;
+                            background: radial-gradient(ellipse at center, rgba(255,255,255,0.9) 56%,rgba(255,255,255,0) 100%);
                         }
                     }
 
