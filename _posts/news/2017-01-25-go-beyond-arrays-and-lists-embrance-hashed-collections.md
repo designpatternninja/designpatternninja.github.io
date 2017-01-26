@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Go beyond arrays and lists. Embrance hashed collections
-excerpt: "Most developers feel confortable using arrays or list collections. Unleash the power of hashed collections!"
-date: 2017-01-24 00:00:00 +0100
-modifiedDate: 2017-01-24 00:00:00 +0100
+excerpt: "Most developers feel confortable using arrays or simple collections like lists. Go beyond of them and unleash the power of hashed collections!"
+date: 2017-01-25 00:00:00 +0100
+modifiedDate: 2017-01-25 00:00:00 +0100
 categories: news
 authors: 
    - mfidemraizer
 ---
 
-Whatever programming language you may use, if it's more or less modern (say from 20 years onwards...) provide data structures and one of them are *collections*.
+Whatever programming language you may use, if it's more or less modern (say from 20 years onwards...), provides data structures and one of them are *collections*.
 
 While an *array* isn't a collection *per se* in some languages like JavaScript they're collections with the semantics of a *list*: *a collection where item ordering is based on insertion order and items can be accessed by a numeric index*.
 
@@ -82,7 +82,7 @@ public class Person
 }
 ```
 
-As you noted in the code snippet, in C# we can override `Object.Equals` and `Object.GetHashCode` to customize what means *equals* for a `Person` (in our case, they're equal if both own the same name).
+As you noted in the code snippet, in C# we can override `Object.Equals` and `Object.GetHashCode` to customize what means *equals* for a `Person` (in our case, they're equal if both own the same name). If you have no idea of what is a *hash code*, you'll understand it during this article once I've already explained what's a *hash function*.
 
 For example, check the follow sample code:
 
@@ -92,7 +92,7 @@ personSet.Add(new Person("Matías"));
 personSet.Add(new Person("Matías"));
 ```
 
-Would both persons be added to the *set*? The answer is ***no***, because both persons are the same person as of how `Object.Equals` has been overridden on `Person` class! No need to check for duplicates! Keep it simple, stupid (again)!
+Would both persons be added to the *set*? The answer is ***no***, because both persons are the same person as of how `Object.Equals`/`Object.GetHashCode` has been overridden on `Person` class! No need to check for duplicates! Keep it simple, stupid (again)!
 
 Now let's consider that you've two lists (instead of *sets*) like these:
 
@@ -192,7 +192,9 @@ for(let id of intersectionResult) {
 
 At this point you would be convinced about the power of *hashed collections* but, anyway, *why are they called **hashed** collections*?
 
-It turns that when you need to search for some occurences inside a regular collection, if matching element is the last element, **you'll need to iterate the entire collection to get it!**. This can be a big performance bottleneck if we talk about really large collections.
+Let's see what happens behind the scenes.
+
+It turns out that when you need to search for some occurences inside a regular collection, if matching element is the last element, **you'll need to iterate the entire collection to get it!**. This can be a big performance bottleneck if we talk about really large collections.
 
 So, how can we solve this? **We do using hash functions**. A hash function is a function to which we provide a value and it outputs **a number**.
 
@@ -289,6 +291,8 @@ map.set("Matías", { name: "John", age: 74 });
 // speed!
 var person = map.get("Matías");
 ```
+
+Please note that what we have learnt today is a very simple implementation compared to how an actual hashed collection is being implemented, but **it has been a good starting point to understand the basics of why they're an important tool that you should be aware of.**
 
 ## Further reading
 
