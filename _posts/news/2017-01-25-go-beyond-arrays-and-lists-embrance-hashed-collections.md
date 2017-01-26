@@ -284,7 +284,7 @@ and replace them with:
 ```javascript
 var map = new Map();
 map.set("Matías", { name: "Matías", age: 31 });
-map.set("Matías", { name: "John", age: 74 });
+map.set("John", { name: "John", age: 74 });
 
 // BLAZING-FAST!!!!!!!!!!!! Either way, if the dictionary has 2 
 // or 2 million elements, a given person will be retrieved at the same
