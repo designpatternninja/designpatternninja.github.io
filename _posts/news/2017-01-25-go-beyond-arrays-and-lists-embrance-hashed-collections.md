@@ -227,7 +227,7 @@ Do you already found how this improves performance? **We can check that a given 
 
 The bad news is that there's no perfect *hash function*: it might happen that two or more values could be computed into the same *slot number*, and this situation is known as **hash collision**. The better is the hash function, the lesser is the chance to repeat a slot. BTW, as I've already say, AFAIK, there's no perfect hash function...
 
-Thus, what it happens then? Well, a simple solution is to store an array on each main array index:
+So... what's next? Well, a simple solution is to store an array on each main array index:
 
 ```javascript
 var array = [];
