@@ -227,7 +227,7 @@ Do you already found how this improves performance? **We can check that a given 
 
 The bad news is that there's no perfect *hash function*: it might happen that two or more values could be computed into the same *slot number*, and this situation is known as **hash collision**. The better is the hash function, the lesser is the chance to repeat a slot. BTW, as I've already say, AFAIK, there's no perfect hash function...
 
-Thus, what it happens then? Well, a simple solution is to store an array on each main array index:
+So... what's next? Well, a simple solution is to store an array on each main array index:
 
 ```javascript
 var array = [];
@@ -284,7 +284,7 @@ and replace them with:
 ```javascript
 var map = new Map();
 map.set("Matías", { name: "Matías", age: 31 });
-map.set("Matías", { name: "John", age: 74 });
+map.set("John", { name: "John", age: 74 });
 
 // BLAZING-FAST!!!!!!!!!!!! Either way, if the dictionary has 2 
 // or 2 million elements, a given person will be retrieved at the same
