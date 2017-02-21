@@ -98,8 +98,8 @@ Object.assertContract = (source, contract) => {
   // Iterates all property names defined in the sample object 
   for (let propertyName of Object.getOwnPropertyNames(contract)) {
     // The whole property name must exist in the source object's prototype
-    // chain and matched property must be of the same type as the contract's one
-    if (!(propertyName in source) && typeof source[propertyName] != contract[propertyName]) {
+    // chain or the matched property must be of the same type as the contract's one
+    if (!(propertyName in source) || typeof source[propertyName] != contract[propertyName]) {
       // If the whole property defined in the contract is fulfilled by
       // no property in the source object, we shourtcircuit the loop and
       // we return false directly
