@@ -38,9 +38,10 @@ namespace DesignPatternNinja.Demonstration
         string Name { get; }
     }
 
-    public interface ITaggable
+    public interface ITaggable<TTag>
+        where TTag : ITag
     {
-        ISet<ITag> Tags { get; }
+        ISet<TTag> Tags { get; }
     }
 
     public class Tag : DomainObject, ITag
@@ -48,10 +49,9 @@ namespace DesignPatternNinja.Demonstration
         public string Name { get; set; }
     }
 
-    public class Contact : DomainObject, ITaggable
+    public class Contact : DomainObject, ITaggable<Tag>
     {
         public ISet<Tag> Tags { get; set; } = new HashSet<Tag>();
-        ISet<ITag> ITaggable.Tags => new HashSet<ITag>(Tags.Cast<ITag>());
     }
 
     public interface IContactRepository
@@ -78,21 +78,22 @@ namespace DesignPatternNinja.Demonstration
 
     public static class TaggingExtensions
     {
-        public static void AddTags<TId, TObject>(this ICanGetObjectsById<TId, TObject> objectByIdGetter, TId id, IEnumerable<ITag> tags)
-            where TObject : ITaggable, IUniquelyIdentifiable<TId>
+        public static void AddTags<TId, TObject, TTag>(this ICanGetObjectsById<TId, TObject> objectByIdGetter, TId id, IEnumerable<TTag> tags)
+            where TObject : ITaggable<TTag>, IUniquelyIdentifiable<TId>
+            where TTag : ITag
         {
             TObject someObject = objectByIdGetter.GetById(id);
 
-            foreach (ITag tag in tags)
+            foreach (TTag tag in tags)
             {
                 someObject.Tags.Add(tag);
             }
         }
     }
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             IContactService contactService = new DefaultContactService(null);
             Guid contactId = Guid.Parse("383488f0-4ad6-48e9-aeb6-b975292332f1");

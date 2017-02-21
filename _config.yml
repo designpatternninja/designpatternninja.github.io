@@ -32,6 +32,9 @@ contributors:
         avatarUrl: "https://media.licdn.com/media/p/4/000/162/04b/1d33a7a.jpg"
 
 
+paginate: 10
+paginate_path: "/archive/:num/"
+
 # Tagging
 mainTags: 
     - architectural
@@ -41,3 +44,5 @@ mainTags:
     - object-mapping
     - software-architecture
     - project-management
+
+gems: [jekyll-paginate]

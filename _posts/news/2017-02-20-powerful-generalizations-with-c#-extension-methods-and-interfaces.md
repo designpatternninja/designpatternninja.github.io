@@ -13,7 +13,7 @@ Say you're a developer working on an average project and you get used to some pr
 
 Also, later on, C# 3.0 introduced *extension methods* and you realized how powerful was (and still is) LINQ, didn't you? But since 2007, you're still consuming existing extension methods defined in both the .NET Framework *base class library* or many satellite frameworks but, again, you're either just being a consumer of them, or you implement extension methods as simple utility methods...
 
-Finally, you regulary implement interfaces and in few cases you define your own ones.
+Finally, you regularly implement interfaces and in few cases you define your own ones.
 
 So if you're reading to this article is because you want to know how to take more advantage of these three mentioned C# language features, right?
 
@@ -180,14 +180,16 @@ Our goal is to implement the `AddTags` once and support any *taggable entity* an
 Wait... what if I want to implement that generalized `AddTags` as part of an infrastructure framework shared by many projects? Would you couple your CRM and Forum using the same `Tag` entity? Another question: do all projects need just a tag *identifier* and *name*? What if some project requires a *tag description*? *Hmmmm...* This also sounds like we need a *tag interface*!
 
 ```c#
-public interface ITag : IUniquelyIdentifiable<Guid>
+public interface 
+: IUniquelyIdentifiable<Guid>
 {
 	string Name { get; }
 }
 
-public interface ITaggable
+public interface ITaggable<TTag>
+	   where TTag : ITag
 {
-	ISet<ITag> Tags { get; }
+	ISet<TTag> Tags { get; }
 }
 ```
 
@@ -202,23 +204,17 @@ public class Tag : DomainObject, ITag
 }
 ```
 
-Furthermore, we still need to implement `ITaggable` interface on both `Contact` and `Customer`. Our issue is that these entities have already implemented a `Tags` property whose type is `ISet<Tag>` instead of `ISet<ITag>` (there's a slight difference, did you notice it?). Luckily, C# has an alternate approach to implement interface called *explicit interface implementation* which let us repeat a class member name if it's qualified with the interface being implemented and it lacks the access modifier:
+Furthermore, we still need to implement `ITaggable<TTag>` interface on both `Contact` and `Customer`:
 
 ```c#
-public class Customer : DomainObject, ITaggable
+public class Customer : DomainObject, ITaggable<Tag>
 {
 	public ISet<Tag> Tags { get; set; } = new HashSet<Tag>();
-    
-    // Also, we can't cast `ISet<Tag>` to `ISet<ITag>` since `ISet<T>` T 
-    // generic parameter isn't covariant. Thus, we need to build a new
-    // HashSet<T> whenever a caller calls ITaggable.Tags...
-    ISet<ITag> ITaggable.Tags => new HashSet<ITag>(Tags.Cast<ITag>());
 }
 
-public class Contact : DomainObject, ITaggable
+public class Contact : DomainObject, ITaggable<Tag>
 {
 	public ISet<Tag> Tags { get; set; } = new HashSet<Tag>();
-    ISet<ITag> ITaggable.Tags => new HashSet<ITag>(Tags.Cast<ITag>());
 }
 ```
 
@@ -253,17 +249,15 @@ public interface ICanGetObjectsById<TId, TObject>
 }
 ```
 
-So we add it to both `IContactService` and `ICustomerService` interfaces:
+So we add it to both `IContactService` and `ICustomerService` interfaces, and we're going to drop `AddTags` methods:
 
 ```c#
 public interface IContactService : ICanGetObjectsById<Guid, Contact>
 {
-	void AddTags(Guid contactId, IEnumerable<Tag> tagsToAdd);
 }
 
 public interface ICustomerService : ICanGetObjectsById<Guid, Customer>
 {
-	void AddTags(Guid customerId, IEnumerable<Tag> tagsToAdd);
 }
 ```
 
@@ -280,16 +274,6 @@ public class DefaultContactService : IContactService
     private IContactRepository Repository { get; }
     
     public Contact GetById(Guid id) => Repository.GetById(id);
-    
-	public void AddTags(Guid contactId, IEnumerable<Tag> tagsToAdd)
-    {
-    	Contact contact = Repository.GetById(contactId);
-        
-        foreach(Tag tag in tagsToAdd)
-        {
-        	contact.Tags.Add(tag);
-        }
-    }
 }
 
 public class DefaultCustomerService : ICustomerService
@@ -302,16 +286,6 @@ public class DefaultCustomerService : ICustomerService
     private ICustomerRepository Repository { get; }
     
     public Customer GetById(Guid id) => Repository.GetById(id);
-    
-	public void AddTags(Guid customerId, IEnumerable<Tag> tagsToAdd)
-    {
-    	Customer customer = Repository.GetById(customerId);
-        
-        foreach(Tag tag in tagsToAdd)
-        {
-        	contact.Tags.Add(tag);
-        }
-    }
 }
 ```
 
@@ -320,12 +294,15 @@ Finally we got all the pieces to make the magic!
 ```c#
 public static class TaggingExtensions
 {
-	public static void AddTags<TId, TObject>(this ICanGetObjectsById<TId, TObject> objectByIdGetter, TId id, IEnumerable<ITag> tags)
-    	where TObject : ITaggable, IUniquelyIdentifiable<TId>
+	// This method can add tags to any object that can get taggable objects
+    // by their identifier, and tag can be any object implementing ITag.
+	public static void AddTags<TId, TObject, TTag>(this ICanGetObjectsById<TId, TObject> objectByIdGetter, TId id, IEnumerable<TTag> tags)
+            where TObject : ITaggable<TTag>, IUniquelyIdentifiable<TId>
+            where TTag : ITag
     {
     	TObject someObject = objectByIdGetter.GetById(id);
         
-        foreach(ITag tag in tags)
+        foreach(TTag tag in tags)
         {
         	someObject.Tags.Add(tag);
         }
