@@ -180,7 +180,7 @@ Our goal is to implement the `AddTags` once and support any *taggable entity* an
 Wait... what if I want to implement that generalized `AddTags` as part of an infrastructure framework shared by many projects? Would you couple your CRM and Forum using the same `Tag` entity? Another question: do all projects need just a tag *identifier* and *name*? What if some project requires a *tag description*? *Hmmmm...* This also sounds like we need a *tag interface*!
 
 ```c#
-public interface 
+public interface ITag
 : IUniquelyIdentifiable<Guid>
 {
 	string Name { get; }
