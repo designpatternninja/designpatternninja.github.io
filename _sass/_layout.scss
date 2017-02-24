@@ -286,7 +286,8 @@
 
 .post .post-title {
     padding: 0 10px;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 60%, rgba(255, 255, 255, 0) 100%)
+    text-shadow: white 1px 1px 5px, white -1px -1px 5px, white 0px 0px 5px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%);
 }
 
 .post-content {
@@ -648,7 +649,7 @@ ul.tags {
     > {
         div {
             width: 100%;
-            background-color: rgba(255,255,255,0.8);
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.8) 30%,rgba(255,255,255,0) 60%); 
             padding: 40px 0;
             display: flex;
             flex-flow: column;
