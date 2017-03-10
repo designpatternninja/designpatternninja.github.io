@@ -43,11 +43,19 @@
                   </ul>
             </section>
             <section id="latestDesignPatterns">
-                <h3><md-icon md-font-icon="alarm_on" aria-label="alarm_on">alarm_on</md-icon>Latest design patterns</h3>
+                <h3><md-icon md-font-icon="alarm_on" aria-label="alarm_on">alarm_on</md-icon>Latest patterns &amp; anti-patterns</h3>
                 <ol class="design-pattern-list">
-                {% assign sortedPages = site.pages | sort:"date" | reverse | where:"categories","design-pattern" %}
+                {% assign patterns = "" | split,"" %}
+
+                {% for page in site.pages %}
+                {% if page.categories contains "design-pattern" or page.categories contains "anti-pattern" %}
+                {% assign patterns = patterns | push:page %}
+                {% endif %}
+                {% endfor %}
+
+                {% assign sortedPages = patterns | sort:"date" | reverse %}
+
                 {% for post in sortedPages limit:5 %}
-                {% if post.categories contains "design-pattern" %}
                 <li ng-class="{ 'selected': master.currentPath.indexOf('{{ post.title | slugify }}') > -1 }">
                    <a href="{{ post.url | replace:'.html','' | prepend: site.baseurl }}" title="{{ post.title }}">
                       <div class="md-list-item-text">
@@ -57,7 +65,9 @@
                             <ul class="tags">
                                {% for tag in post.categories %}
                                {% unless tag == "design-pattern" %}
+                               {% unless tag == "anti-pattern" %}
                                <li>{{tag}}</li>
+                               {% endunless %}
                                {% endunless %}
                                {% endfor %}
                             </ul>
@@ -65,7 +75,6 @@
                       </div>
                    </a>
                 </li>
-                {% endif %}
                 {% endfor %}
              </ol>
             </section>
