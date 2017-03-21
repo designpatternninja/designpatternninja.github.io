@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Go beyond arrays and lists. Embrance hashed collections
+title: Go beyond arrays and lists. Embrace hashed collections
 excerpt: "Most developers feel confortable using arrays or simple collections like lists. Go beyond of them and unleash the power of hashed collections!"
 date: 2017-01-25 00:00:00 +0100
 modifiedDate: 2017-01-25 00:00:00 +0100
