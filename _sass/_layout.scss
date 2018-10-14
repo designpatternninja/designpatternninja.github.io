@@ -808,6 +808,15 @@ ul.tags {
     .content-wrapper {
         max-width: initial !important;
     }
+
+    .footer-col-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .footer-col-1, .footer-col-2, .footer-col-3 {
+            width: initial;
+        }
+    }
 }
 
 a.page-link.selected {
