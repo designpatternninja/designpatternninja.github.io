@@ -126,7 +126,7 @@ Note that most programming languages are hybridizations of what we call imperati
 
 **CURRENT SELF**: Actually, I would say that FP in OOP simplifies or compacts mechanisms and practices: you get more with few lines. But it's still imperative programming and OOP. 
 
-FP represents a paradigm that can work independently. It's what we call a purely-functional programming language.
+FP represents a paradigm that can work independently. When a language is *functional only*, we say that it's a purely-functional programming language.
 
 
 **PAST SELF**: Really? Would you care to elaborate more about this? It's interesting.
