@@ -85,12 +85,12 @@ See, I really believe I've raised you another point of view to tackle the same p
 **PAST SELF**: Who cares about the order? Aren't we still talking about the same thing?
 
 
-**CURRENT SELF**: No, we're talking about a substantial difference: OOP works around objects which perform actions and communicate with other objects. Nevertheless, I'm posing you that we're segregating functionality from concrete attributes (i.e. data) that may be mandatory to let something work: unscrewing star screws requires screws owning a star screw.
+**CURRENT SELF**: No, we're talking about a substantial difference: OOP works around objects which perform actions and communicate with other objects. Nevertheless, I'm posing you that we're segregating functionality from concrete attributes (i.e. data) that may be mandatory to let some thing work: unscrewing star screws requires screws owning star-shaped screw heads.
 
 Now let's express the same problem from OOP standpoint: the star screwdriver requires a star screw.
 
 
-**PAST SELF**: I doesn't make sense to me. What's going on?
+**PAST SELF**: It doesn't make sense to me. What's going on?
 
 
 **CURRENT SELF**: There's an essential paradigmatic difference.
