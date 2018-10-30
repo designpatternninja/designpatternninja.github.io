@@ -77,7 +77,7 @@ So what?
 **PAST SELF**: Yes, but again: so what?
 
 
-**CURRENT SELF**: How could you still be saying "so what?" Our starting point was the OOP is the nearest mindset to how human mind actually works. This paradigm drives us to think on concepts first, later we go for concreteness, and finally we identify actions (usually called "methods").
+**CURRENT SELF**: How could you still be saying "so what?" Our starting point was the OOP is the nearest mindset to how human mind actually works. This paradigm drives us to think in concepts first, later we go for concreteness, and finally we identify actions (usually called "methods").
 
 See, I really believe I've raised you another point of view to tackle the same problems.
 
