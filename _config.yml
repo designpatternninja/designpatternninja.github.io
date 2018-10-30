@@ -30,6 +30,10 @@ contributors:
         fullName: "Eric Evans"
         siteUrl: "https://www.linkedin.com/in/ericevansddd"
         avatarUrl: "https://media.licdn.com/media/p/4/000/162/04b/1d33a7a.jpg"
+    ???:
+        fullName: "???"
+        siteUrl: ""
+        avatarUrl: ""
 
 
 paginate: 10
@@ -44,5 +48,6 @@ mainTags:
     - object-mapping
     - software-architecture
     - project-management
+    - functional-programming
 
 gems: [jekyll-paginate]
