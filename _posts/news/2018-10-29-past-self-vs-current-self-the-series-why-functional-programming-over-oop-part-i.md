@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PAST SELF vs. CURRENT SELF - THE SERIES: WHY "FUNCTIONAL PROGRAMMING" OVER "OOP" (PART I)'
+title: "PAST SELF vs. CURRENT SELF - THE SERIES: WHY FUNCTIONAL PROGRAMMING OVER OOP (PART I)"
 excerpt: "I start a series of posts on which I'll discuss with my past about different topics about software programming using dialectics"
 date: 2018-10-29 00:00:00 +0100
 modifiedDate: 2018-10-30 00:00:00 +0100
