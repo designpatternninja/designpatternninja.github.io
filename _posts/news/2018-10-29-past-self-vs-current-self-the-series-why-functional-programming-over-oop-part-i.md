@@ -71,7 +71,7 @@ So, the next question is what kind of screwdriver you really need: a star screwd
 So what?
 
 
-**CURRENT SELF**: I wonder that you should've noted a clear separation of tool's functionality and its concrete details. There're star screwdrivers, plain screwdrivers...
+**CURRENT SELF**: I guess that you've already noted a clear separation of tool's functionality and its concrete details. There're star screwdrivers, plain screwdrivers...
 
 
 **PAST SELF**: Yes, but again: so what?
