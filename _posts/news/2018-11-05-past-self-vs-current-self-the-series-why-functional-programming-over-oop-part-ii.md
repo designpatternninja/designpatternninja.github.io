@@ -37,7 +37,7 @@ Try to visualize the following case: there's a lab which *analyzes water healthi
 
 **CURRENT SELF**: In OOP's mindset we would have thought about a water tank owning an action called *analyzeHealthiness* receiving a *water sample* too. But there's a problem here. 
 
-In fact, since OOP is about mutability since object methods may alter object's state, it would mean that there's no guarantee of not altering own water sample's healthiness to check its own healthiness by design. Wouldn't you mix some chemical components with the whole water sample to get the report?
+In fact, since OOP is about mutability and object methods may alter object's state, it would mean that there's no guarantee of not altering own water sample's healthiness to check its own healthiness by design. Wouldn't you mix some chemical components with the whole water sample to get the report?
 
 **PAST SELF**: Sounds logical. What's the alternative? We wouldn't be able to analyze some water sample without previously using certain substances on it. 
 
