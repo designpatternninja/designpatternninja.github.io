@@ -13,7 +13,7 @@ authors:
 
 **CURRENT SELF**: Hey! You came back to continue the discussion, right?
 
-**PAST SELF**: Why not? I'm really interested about the topic. Let's start where we left on last Monday.
+**PAST SELF**: Why not? I'm really interested about the topic. Let's start where we left it on last Monday.
 
 Do you remember that you mentioned the fact that there're *purely-functional programming languages*? What do you mean with that?
 
