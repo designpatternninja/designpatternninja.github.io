@@ -55,7 +55,7 @@ Theoretically, an instance method which obeys the mathematical definition of *fu
 
 **CURRENT SELF**: Understood. So, in procedural programming, both procedures and functions are just a way to box sentences to evolve reusable code. In fact, OOP is a paradigm on top of procedural. Object method's goal is reusability with a more savvy approach, but at its core, we're talking about the same definitions.
 
-**PAST SELF**: Thus, what's makes the difference?
+**PAST SELF**: Thus, what makes the difference?
 
 **CURRENT SELF**: The little big difference is FP considers *functions* as *values*. Just think about *integers* or *strings*: you're very used to work with their associated methods to perform additions and concatenations, respectively.
 
