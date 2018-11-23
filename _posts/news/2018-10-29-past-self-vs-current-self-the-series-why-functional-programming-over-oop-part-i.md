@@ -136,3 +136,6 @@ FP represents a paradigm that can work independently. When a language is *functi
 
 
 **PAST SELF**: It sounds perfect for me! See you on next Monday.
+
+
+## [Next part: II](/news/2018/11/04/past-self-vs-current-self-the-series-why-functional-programming-over-oop-part-ii)
