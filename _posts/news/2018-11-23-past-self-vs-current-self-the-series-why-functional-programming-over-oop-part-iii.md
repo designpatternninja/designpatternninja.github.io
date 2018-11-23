@@ -77,7 +77,7 @@ Let's say you eat it... How do your parents know you liked it? They're going to 
 
 **PAST SELF**: Yeah. So?
 
-**CURRENT SELF**: Functional programming makes things clearer: if you eat that beefsteek, you're going to say *thank you daddy and mummy! it's wonderful*, therefore they will give you another feedback: *if you liked it, we'll buy more next week! Come to our home again!*, then you'll answer *Of course!*, and the successive feedbacks will produce new conversations for the rest of your lifes. 
+**CURRENT SELF**: Functional programming makes things clearer: if you eat that beefsteek, you're going to say *thank you daddy and mommy! it's wonderful*, therefore they will give you another feedback: *if you liked it, we'll buy more next week! Come to our home again!*, then you'll answer *Of course!*, and the successive feedbacks will produce new conversations for the rest of your lifes. 
 
 Communication shouldn't be a side-effect, should be? Everything in FP is a pipeline of glued functions to produce an  expected output.
 
