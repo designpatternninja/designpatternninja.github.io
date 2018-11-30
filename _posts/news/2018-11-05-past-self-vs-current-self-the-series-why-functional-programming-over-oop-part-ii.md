@@ -95,4 +95,4 @@ For example, parallel programming or threading are a breeze with immutability. Y
 
 **CURRENT SELF**: See you! Goodbye!
 
-## [Next part: III](/news/2018/11/23/past-self-vs-current-self-the-series-why-functional-programming-over-oop-part-iii)
+## [Next part: III](/news/2018/11/22/past-self-vs-current-self-the-series-why-functional-programming-over-oop-part-iii)
